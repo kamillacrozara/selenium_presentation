@@ -40,13 +40,9 @@ class DownloadEachTc(unittest.TestCase):
                     tcID = 0
 
                 if(tcID):
-                    #the comma in the end of the string is just a little
-                    #trick to have the "ok" message on the same line. It works!
-                    #print ("tcID = %s..." %tcID),
                     resp = requests.head(self.base_url + "/view.php?reference=%s&action=zip-selected" %tcID)
                     try: 
                         self.assertEqual(resp.status_code, 200)
-                        #print "ok status code = " + str(resp.status_code)
                     except AssertionError as e: self.verificationErrors.append(str(e))
                 j += 1 
             i+=20
