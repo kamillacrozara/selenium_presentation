@@ -15,7 +15,7 @@ class GeneratedSrdSdDropdownSearchTc(unittest.TestCase):
     
     def test_generated_srd_sd_dropdown_search_tc(self):
         driver = self.driver
-        driver.get(self.base_url + "/ngSRD/view.php")
+        driver.get(self.base_url + "SRD/view.php")
         driver.find_element_by_link_text("Search / Download").click()
         driver.find_element_by_link_text("Search").click()
         driver.find_element_by_name("description").clear()

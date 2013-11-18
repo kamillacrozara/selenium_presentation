@@ -1,12 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 *-*
 
-##@package srd_checklinks_tcs
-# Package with tests of all download links in SRD. 
-
-##@file download_each_tc_test.py
-# @brief Test Cases to verify all the download links in the SRD
-# @ingroup suite_srd_ckecklinks
 from selenium import webdriver
 import unittest
 import requests
@@ -30,7 +24,6 @@ class DownloadEachTc(unittest.TestCase):
         #for each page in SRD
         while (i < 88720):
             j = 2
-            #self.open_page(i)
             driver.get(self.base_url + "/view.php?count=20&first=%s&sort=asc" %i)
             #try to go in each tc and download it
             while (j < 22):

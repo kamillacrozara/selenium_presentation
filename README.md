@@ -3,23 +3,26 @@ Selenium Presentation
 
 ## Requirements ##
 
-	Webdriver and Firefox or Chrome: 
-
-		- Firefox web browser (www.mozilla.org) v >= 24
-		- Chrome web browser (www.google.com/chrome/‎) v >= 29 
-		- Chrome Driver (https://code.google.com/p/chromedriver/downloads/list) v >= 2.2 
-		- Python "selenium" package (https://pypi.python.org/pypi/selenium)
-		- Python "requests" package (https://pypi.python.org/pypi/requests)
+	- Firefox web browser (www.mozilla.org) v >= 24
+	- Selenium WebDriver (http://www.seleniumhq.org/download/) v >= 2.4.0
+	- Python "selenium" package (https://pypi.python.org/pypi/selenium)
+	- Python "requests" package (https://pypi.python.org/pypi/requests)
 
 	
-	Installing Chrome Driver:
+	Optional:
 
-		Download the appropriate file: Chrome Driver (http://code.google.com/p/chromedriver/downloads/list)
+		- Chrome web browser (www.google.com/chrome/‎) v >= 29 
+		- Chrome Driver (https://code.google.com/p/chromedriver/downloads/list) v >= 2.2 
+	
+		Installing Chrome Driver:
 
-		And unzip the Chrome Driver in /usr/bin/google-chrome folder.
+			Download the appropriate file: 
+				Chrome Driver (http://code.google.com/p/chromedriver/downloads/list)
+
+			And unzip the Chrome Driver in /usr/bin/google-chrome folder.
 
 
-## Demo test cases description ##
+## Demo - Test cases description ##
 
 	### Test 1 - ASCII Special Characters in UI ###
 
