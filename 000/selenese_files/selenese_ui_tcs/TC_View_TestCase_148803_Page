@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://samate.nist.gov/" />
+<title>TC_VIEW_TestCase_148803_Page</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">TC_VIEW_TestCase_148803_Page</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/ngSRD/index.php</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[contains(text(),'View / Download')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//div[@id='content']/form/table/tbody/tr/td[2]/a/img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[contains(@href, 'view_testcase.php?tID=148803')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>SAMATE Reference Dataset :: TestCase 148803</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//div[@id='menu']/ul/li/a</td>
+	<td>SRD Home</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//div[@id='menu']/ul/li[2]/a</td>
+	<td>View / Download</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//div[@id='menu']/ul/li[3]/a</td>
+	<td>Search / Download</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//div[@id='menu']/ul/li[4]/a</td>
+	<td>More Downloads</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//div[@id='menu']/ul/li[5]/a</td>
+	<td>Test Suites</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div/span</td>
+	<td>exact:Downloads:</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//img[@alt='Download this Test Case #148803']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/h1/a</td>
+	<td>Back to the previous page</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/table/tbody/tr/td</td>
+	<td>Test Case ID</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/table/tbody/tr[2]/td/strong/acronym</td>
+	<td>Bad / Good / Mixed</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/table/tbody/tr[3]/td</td>
+	<td>Author</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/table/tbody/tr[4]/td</td>
+	<td>Associated test case</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/table/tbody/tr[5]/td</td>
+	<td>Contributor</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/table/tbody/tr[6]/td</td>
+	<td>Language</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/table/tbody/tr[7]/td</td>
+	<td>Type of test case</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/table/tbody/tr[9]/td/strong/acronym</td>
+	<td>Input string</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/table/tbody/tr[10]/td/strong/acronym</td>
+	<td>Expected Output</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/table/tbody/tr[11]/td/strong/acronym</td>
+	<td>Instructions</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/table/tbody/tr[12]/td</td>
+	<td>Submission date</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/table/tbody/tr[13]/td</td>
+	<td>Description</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/table/tbody/tr[14]/td</td>
+	<td>Filename</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/table/tbody/tr[15]/td</td>
+	<td>Flaw</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/table/tbody/tr/td[2]/span</td>
+	<td>148803</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//div[@id='content']/table/tbody/tr/td[2]/a/img</td>
+	<td>Candidate</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//div[@id='content']/table/tbody/tr[2]/td[2]/a/img</td>
+	<td>Bad test case</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//div[@id='content']/table/tbody/tr[2]/td[2]/a/img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//a[contains(text(),'CWE90_LDAP_Injection__listen_tcp_81_bad.java')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//a[contains(text(),'CWE90_LDAP_Injection__listen_tcp_81_base.java')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//a[contains(text(),'AbstractTestCaseBase.java')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//a[contains(text(),'IO.java')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//a[contains(text(),'AbstractTestCase.java')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//a[contains(text(),'CWE90_LDAP_Injection__listen_tcp_81a.java')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//a[contains(text(),'CWE90_LDAP_Injection__listen_tcp_81_goodG2B.java')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=img[alt=&quot;(?)&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/table/tbody/tr[15]/td[2]/ul/li/div</td>
+	<td>+ Root<br /> CWE-019: Data Handling<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CWE-118: Improper Access of Indexable Resource (Range Error)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CWE-020: Insufficient Input Validation<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CWE-074: Failure to Sanitize Data into a Different Plane (Injection)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CWE-090: LDAP Injection</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='flaw_0']/span</td>
+	<td>CWE-090: LDAP Injection</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=img[alt=&quot;(?)&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//a[contains(text(),'Submit a comment')]</td>
+	<td>Submit a comment</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='mainTabContainer']/div/div/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='tab0']/div/ol/li[2]/div/span</td>
+	<td>exact:Filename: CWE90_LDAP_Injection__listen_tcp_81_bad.java</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='mainTabContainer']/div/div[2]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='tab1']/div/ol/li[2]/div/span</td>
+	<td>exact:Filename: CWE90_LDAP_Injection__listen_tcp_81_base.java</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='mainTabContainer']/div/div[3]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='tab2']/div/ol/li[3]/div/span</td>
+	<td>AbstractTestCase classes.</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='mainTabContainer']/div/div[4]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='tab3']/div/ol/li[2]/div/span</td>
+	<td>exact:* @description Helper IO class</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='mainTabContainer']/div/div[5]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='tab4']/div/ol/li[8]/div</td>
+	<td>public abstract class AbstractTestCase extends AbstractTestCaseBase</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='mainTabContainer']/div/div[6]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='tab5']/div/ol/li[2]/div/span</td>
+	<td>exact:Filename: CWE90_LDAP_Injection__listen_tcp_81a.java</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='mainTabContainer']/div/div[7]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='tab6']/div/ol/li[2]/div/span</td>
+	<td>exact:Filename: CWE90_LDAP_Injection__listen_tcp_81_goodG2B.java</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='footer']/div/p/span[@class='data']</td>
+	<td>Information Technology Laboratory, Software and Systems Division <br /> PRIVACY/SECURITY ISSUES • FOIA • Disclaimer • USA.gov <br /> NIST is an agency of the U.S. Commerce Department</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='footer']/div/p/span[@class='fieldName']</td>
+	<td>Contact:&nbsp;&nbsp;samate@nist.gov <br /> This webpage is XHTML Strict and AA compliant. <br /> Created on January 2006, last update: June 1, 2013, Version: 4.3</td>
+</tr>
+</tbody></table>
+</body>
+</html>

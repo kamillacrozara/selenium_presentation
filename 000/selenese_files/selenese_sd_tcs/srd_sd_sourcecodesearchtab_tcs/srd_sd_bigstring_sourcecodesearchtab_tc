@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://samate.nist.gov/" />
+<title>srd_sd_bigstring_sourcecodesearchtab_tc</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">srd_sd_bigstring_sourcecodesearchtab_tc</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/ngSRD/search.php?extended</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[contains(text(),'SRD Home')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[contains(text(),'Search / Download')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[contains(text(),'Source Code Search')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//input[@id='function']</td>
+	<td>I am typing in more than 500 characters of text to test whether the more than 500 characters are cut off or if they display correctly. 500 characters is a lot of text. I am typing in more than 500 characters of text to test whether the more than 500 characters are cut off or if they display correctly. 500 characters is a lot of text. I am typing in more than 500 characters of text to test whether the more than 500 characters are cut off or if they display correctly. 500 characters is a lot of text.</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@name='Submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>SAMATE Reference Dataset :: View all test cases</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']</td>
+	<td>View/Download Downloads:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /> <br /> There is no such test case in the database! Back to the previous page</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//a[contains(text(),'Back to the previous page')]</td>
+	<td>Back to the previous page</td>
+</tr>
+<tr>
+	<td>goBackAndWait</td>
+	<td>ngSRD/view.php?function=&quot;This+sentence+is+wrapped+in+double+quotes.&quot;&amp;precision=1&amp;fileName=&amp;minFileSize=&amp;maxFileSize=&amp;minFiles=&amp;maxFiles=&amp;Submit=SRD+Source+Code+Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//input[@id='function']</td>
+	<td>I am typing in more than 500 characters of text to test whether the more than 500 characters are cut off or if they display correctly. 500 characters is a lot of text. I am typing in more than 500 characters of text to test whether the more than 500 characters are cut off or if they display correctly. 500 characters is a lot of text. I am typing in more than 500 characters of text to test whether the more than 500 characters are cut off or if they display correctly. 500 characters is a lot of text.</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@name='precision'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@name='Submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>SAMATE Reference Dataset :: View all test cases</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']</td>
+	<td>View/Download Downloads:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /> <br /> There is no such test case in the database! Back to the previous page</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//a[contains(text(),'Back to the previous page')]</td>
+	<td>Back to the previous page</td>
+</tr>
+<tr>
+	<td>goBackAndWait</td>
+	<td>ngSRD/view.php?function=&quot;This+sentence+is+wrapped+in+double+quotes.&quot;&amp;precision=1&amp;fileName=&amp;minFileSize=&amp;maxFileSize=&amp;minFiles=&amp;maxFiles=&amp;Submit=SRD+Source+Code+Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//input[@id='fileName']</td>
+	<td>I am typing in more than 500 characters of text to test whether the more than 500 characters are cut off or if they display correctly. 500 characters is a lot of text. I am typing in more than 500 characters of text to test whether the more than 500 characters are cut off or if they display correctly. 500 characters is a lot of text. I am typing in more than 500 characters of text to test whether the more than 500 characters are cut off or if they display correctly. 500 characters is a lot of text.</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@name='Submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>SAMATE Reference Dataset :: View all test cases</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']</td>
+	<td>View/Download Downloads:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /> <br /> There is no such test case in the database! Back to the previous page</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//a[contains(text(),'Back to the previous page')]</td>
+	<td>Back to the previous page</td>
+</tr>
+<tr>
+	<td>goBackAndWait</td>
+	<td>ngSRD/view.php?function=&quot;This+sentence+is+wrapped+in+double+quotes.&quot;&amp;precision=1&amp;fileName=&amp;minFileSize=&amp;maxFileSize=&amp;minFiles=&amp;maxFiles=&amp;Submit=SRD+Source+Code+Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//input[@id='fileName']</td>
+	<td>I am typing in more than 500 characters of text to test whether the more than 500 characters are cut off or if they display correctly. 500 characters is a lot of text. I am typing in more than 500 characters of text to test whether the more than 500 characters are cut off or if they display correctly. 500 characters is a lot of text. I am typing in more than 500 characters of text to test whether the more than 500 characters are cut off or if they display correctly. 500 characters is a lot of text.</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@name='searchNameByRegex']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@name='Submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>SAMATE Reference Dataset :: View all test cases</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']</td>
+	<td>View/Download Downloads:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /> <br /> There is no such test case in the database! Back to the previous page</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//a[contains(text(),'Back to the previous page')]</td>
+	<td>Back to the previous page</td>
+</tr>
+<tr>
+	<td>goBackAndWait</td>
+	<td>ngSRD/view.php?function=&quot;This+sentence+is+wrapped+in+double+quotes.&quot;&amp;precision=1&amp;fileName=&amp;minFileSize=&amp;maxFileSize=&amp;minFiles=&amp;maxFiles=&amp;Submit=SRD+Source+Code+Search</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

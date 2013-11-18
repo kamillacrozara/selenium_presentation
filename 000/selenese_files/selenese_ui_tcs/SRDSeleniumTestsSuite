@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+  <title>Test Suite</title>
+</head>
+<body>
+<table id="suiteTable" cellpadding="1" cellspacing="1" border="1" class="selenium"><tbody>
+<tr><td><b>Test Suite</b></td></tr>
+<tr><td><a href="TC_SRD_Home">TC_SRD_Home</a></td></tr>
+<tr><td><a href="TC_View_Download">TC_View_Download</a></td></tr>
+<tr><td><a href="TC_View_TestCase_6_Page">TC_View_TestCase_6_Page</a></td></tr>
+<tr><td><a href="TC_View_TestCase_148803_Page">TC_View_TestCase_148803_Page</a></td></tr>
+<tr><td><a href="TC_Search_Download_SearchTab">TC_Search_Download_SearchTab</a></td></tr>
+<tr><td><a href="TC_Search_Download_ExtendedSearchTab">TC_Search_Download_ExtendedSearchTab</a></td></tr>
+<tr><td><a href="TC_Search_Download_SourceCodeSearch">TC_Search_Download_SourceCodeSearch</a></td></tr>
+<tr><td><a href="TC_More_Downloads">TC_More_Downloads</a></td></tr>
+<tr><td><a href="TC_Test_Suites">TC_Test_Suites</a></td></tr>
+</tbody></table>
+</body>
+</html>
