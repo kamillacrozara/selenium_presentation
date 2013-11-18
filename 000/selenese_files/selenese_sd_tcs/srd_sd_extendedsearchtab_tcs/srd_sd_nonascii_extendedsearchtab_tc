@@ -68,8 +68,7 @@
 </tr>
 <tr>
 	<td>goBackAndWait</td>
-	<td>ngSRD/view.php?fromWhere=fromSearch&amp;flaw=Any...&amp;codecplx=Any...&amp;reference=I+am+typing+in+more+than+500+characters+of+text+to+test+whether+the+more+than+500+characters+are+cut+off+or+if+they+display+corr&amp;description=&amp;author=&amp;contributor=&amp;flawed[]=Any...&amp;languages[]=Any...&amp;typesofartifacts[]=Any...&amp;status_Candidate=1&amp;status_Approved=1&amp;flaw_ro=Any...&amp;codecplx_ro=Any...&amp;date=&amp;typeDate=Any...&amp;Submit=Search+Test+Cases</td>
-	<td></td>
+	
 </tr>
 <tr>
 	<td>sendKeys</td>
@@ -98,8 +97,7 @@
 </tr>
 <tr>
 	<td>goBackAndWait</td>
-	<td>ngSRD/view.php?fromWhere=fromSearch&amp;flaw=Any...&amp;codecplx=Any...&amp;reference=I+am+typing+in+more+than+500+characters+of+text+to+test+whether+the+more+than+500+characters+are+cut+off+or+if+they+display+corr&amp;description=&amp;author=&amp;contributor=&amp;flawed[]=Any...&amp;languages[]=Any...&amp;typesofartifacts[]=Any...&amp;status_Candidate=1&amp;status_Approved=1&amp;flaw_ro=Any...&amp;codecplx_ro=Any...&amp;date=&amp;typeDate=Any...&amp;Submit=Search+Test+Cases</td>
-	<td></td>
+
 </tr>
 <tr>
 	<td>sendKeys</td>
@@ -128,8 +126,7 @@
 </tr>
 <tr>
 	<td>goBackAndWait</td>
-	<td>ngSRD/view.php?fromWhere=fromSearch&amp;flaw=Any...&amp;codecplx=Any...&amp;reference=I+am+typing+in+more+than+500+characters+of+text+to+test+whether+the+more+than+500+characters+are+cut+off+or+if+they+display+corr&amp;description=&amp;author=&amp;contributor=&amp;flawed[]=Any...&amp;languages[]=Any...&amp;typesofartifacts[]=Any...&amp;status_Candidate=1&amp;status_Approved=1&amp;flaw_ro=Any...&amp;codecplx_ro=Any...&amp;date=&amp;typeDate=Any...&amp;Submit=Search+Test+Cases</td>
-	<td></td>
+
 </tr>
 <tr>
 	<td>sendKeys</td>
@@ -158,8 +155,7 @@
 </tr>
 <tr>
 	<td>goBackAndWait</td>
-	<td>ngSRD/view.php?fromWhere=fromSearch&amp;flaw=Any...&amp;codecplx=Any...&amp;reference=I+am+typing+in+more+than+500+characters+of+text+to+test+whether+the+more+than+500+characters+are+cut+off+or+if+they+display+corr&amp;description=&amp;author=&amp;contributor=&amp;flawed[]=Any...&amp;languages[]=Any...&amp;typesofartifacts[]=Any...&amp;status_Candidate=1&amp;status_Approved=1&amp;flaw_ro=Any...&amp;codecplx_ro=Any...&amp;date=&amp;typeDate=Any...&amp;Submit=Search+Test+Cases</td>
-	<td></td>
+
 </tr>
 <tr>
 	<td>open</td>

@@ -68,8 +68,7 @@
 </tr>
 <tr>
 	<td>goBackAndWait</td>
-	<td></td>
-	<td></td>
+	
 </tr>
 <tr>
 	<td>sendKeys</td>
@@ -98,8 +97,7 @@
 </tr>
 <tr>
 	<td>goBackAndWait</td>
-	<td></td>
-	<td></td>
+
 </tr>
 <tr>
 	<td>sendKeys</td>
@@ -117,9 +115,18 @@
 	<td></td>
 </tr>
 <tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']</td>
+	<td>View/Download Downloads:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /> <br /> There is no such test case in the database! Back to the previous page</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Back to the previous page</td>
+	<td>Back to the previous page</td>
+</tr>
+<tr>
 	<td>goBackAndWait</td>
-	<td></td>
-	<td></td>
+
 </tr>
 <tr>
 	<td>sendKeys</td>
@@ -137,8 +144,22 @@
 	<td></td>
 </tr>
 <tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']</td>
+	<td>View/Download Downloads:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /> <br /> There is no such test case in the database! Back to the previous page</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Back to the previous page</td>
+	<td>Back to the previous page</td>
+</tr>
+<tr>
 	<td>goBackAndWait</td>
-	<td>http://samate.nist.gov/ngSRD/search.php?extended</td>
+
+</tr>
+<tr>
+	<td>open</td>
+	<td></td>
 	<td></td>
 </tr>
 </tbody></table>
