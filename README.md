@@ -1,8 +1,7 @@
 Selenium Presentation
 =====================
 
-
-# Requirements: #
+## Requirements ##
 
 	Webdriver and Firefox or Chrome: 
 
@@ -20,7 +19,7 @@ Selenium Presentation
 		And unzip the Chrome Driver in /usr/bin/google-chrome folder.
 
 
-# Demo test cases description #
+## Demo test cases description ##
 
 	### Test 1 - ASCII Special Characters in UI ###
 
@@ -39,6 +38,8 @@ Selenium Presentation
 		 - #20
 		 - \/
 
+		 And verify if the search is performed correctly.
+
 
 	 ### Test 2 - Non-ASCII Characters in UI ###
 
@@ -46,4 +47,4 @@ Selenium Presentation
 
 		 - ñó? ä?çíì ??/??  ??/?? Huáy?; ?? Zh?ngwén ???????? Lech Wa??sa æøå
 
-		And verify if the search is performed correctly.1
+		And verify if the search is performed correctly.
