@@ -1,4 +1,4 @@
-Selenium Presentation
+Selenium WebDriver
 =====================
 
 ## Requirements ##
