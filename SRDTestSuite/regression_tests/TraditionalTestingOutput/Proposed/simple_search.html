@@ -1,0 +1,210 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="robots" content="index, follow" />
+	<meta name="revisit-after" content="1 days" />
+		<title>SAMATE Reference Dataset </title>
+
+	<script type='text/javascript' src='js/design.js'></script>
+	<script type='text/javascript' src='js/utils.js' ></script>
+
+	<!--[if IE 6]>
+	<script type='text/javascript' src='js/ie6.js'></script>
+	<![endif]-->
+
+	<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+	</script>
+	<script type="text/javascript">
+	_uacct = "UA-437942-2";
+	urchinTracker();
+	</script>
+
+	<link href='css/style-samate.css' rel='stylesheet' type='text/css' />
+				  <!--link rel="alternate" type="application/rss+xml" title="RSS 2.0 for the Samate Reference Dataset" href="http://samate.nist.gov/SRD/rss.php" /-->
+
+</head>
+	<body>	<div id='msg-container'>
+							</div>	
+
+	<!-- Main menu -->
+
+	<div id='top'>
+		<map id="logoMap" name="logoMap">
+		<area href="http://samate.nist.gov" title="SAMATE Website" coords="2,2,85,100" alt="SAMATE Logo"/>
+		<area href="http://nist.gov" title="National Institute of Standards and Technology" coords="95,15,225,65" alt="NIST Logo"/>
+		</map>
+		<img usemap="#logoMap" class='left' src='images/dhs/samate_left.png' alt='The SAMATE Project' />
+		<a href='http://www.dhs.gov' title='Department of Homeland Security' ><img class='right' src='images/dhs/dhs_right_simple.png' alt='Department of Homeland Security' /></a>
+	</div>
+	<div id="menu">
+	<ul>
+		<li ><a href="index.php" title="Home">SRD Home</a></li>
+		<li ><a href="view.php" title="View and download the test cases">View / Download</a></li>
+		<li class='active'><a href="search.php" title="Search in the test cases repository">Search / Download</a></li>
+		<li ><a href="around.php" title="More Downloads: General information, etc.">More Downloads</a></li>
+				<li ><a href='testsuite.php?login=Guest' title='Test Suite Manager'>Test Suites</a></li>
+	</ul>
+	</div>
+
+	<!-- /Menu -->
+<noscript>
+<div id='warning'>
+You need to enable JavaScript to be able to use all the possibilities of this page.
+</div>
+</noscript>
+
+<!-- Add autocomplete feature from jquery ui -->
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="js/addAutoComplete.js"></script>
+
+<div id="content"> <h1>Search/Download</h1>
+<br />
+	
+
+<ul id="search-menu">
+  <li id="search-nav-1" class='active'><a href="search.php?simple">Search</a></li>
+  <li id="search-nav-2"  ><a href="search.php?extended">Extended Search</a></li>
+  <li id="search-nav-3"  ><a href="search.php?code">Source Code Search</a></li>
+</ul>
+<div id="search_tID" >
+	<div id='viewForm'>
+	<form  method="get" action="view.php">
+	<table style='border:0; width:100%;'>
+		<tr style='width:100%'>
+		<td style='border:0; vertical-align: top; width:70%;' >
+			<input name="fromWhere" type="hidden" value="fromSearch" />
+			<input name="flaw" type="hidden" value="Any..." />
+			<input name="codecplx" type="hidden" value="Any..." />
+
+			<div class='line'>
+				<label><span class='fieldName'><strong>Number (Test case ID): </strong></span>
+				<span class='data'><input name="reference" type="text" value="" size="50" maxlength="128" /></span></label>
+			</div>
+			<div class='line'>
+				<label><span class='fieldName'><strong>Description contains: </strong></span>
+				<span class='data'><input name="description" type="text" value="" size="50" maxlength="128" /></span></label>
+			</div>
+
+			<div class='line'>
+				<label><span class='fieldName'>Author:</span>
+				<span class='data'><input name="author" type="text" value="" size="50" maxlength="128" /></span></label>
+			</div>
+			<div class='line'>
+				<label><span class='fieldName'>Contributor:</span>
+				<span class='data'><input name="contributor" type="text" value="" size="50" maxlength="128" /></span></label>
+			</div>
+
+					
+						<div class='line'>
+							
+				<label><span class='fieldName'><acronym title="Bad: A test case with one or more flaws - Good: A test case without known flaws.">
+						Bad / Good / Mixed:
+						</acronym> </span>
+				<span class='data'>
+					<select name='flawed[]'>
+						<option label="Any...">Any...</option>
+						<option label="Bad">Bad</option>
+						<option label="Good">Good</option>
+						<option label="Mixed">Mixed</option>
+					</select>
+				</span></label>
+			</div>
+			<div class='line'>
+				<label><span class='fieldName'>Language: </span>
+				<span class='data'>
+					<select name='languages[]'>
+					<option label="Any...">Any...</option>
+										<option value="C">C</option>
+										<option value="C++">C++</option>
+										<option value="Java">Java</option>
+										<option value="Ada">Ada</option>
+										<option value="PHP">PHP</option>
+										<option value="Python">Python</option>
+										<option value="C#">C#</option>
+										</select>
+				</span></label>
+			</div>
+			<div class='line'>
+				<label><span class='fieldName'>Type of Artifact: </span>
+				<span class='data'>
+					<select name='typesofartifacts[]'>
+						<option label="Any...">Any...</option>
+										<option  value="Source Code">Source Code</option>
+										<option  value="Binary">Binary</option>
+										<option  value="Pseudo Code">Pseudo Code</option>
+										<option  value="Mix Of Artifact">Mix Of Artifact</option>
+										</select>
+				</span></label>
+			</div>
+			
+			<div class='line'>
+				<span class='fieldName'>Status:</span>
+				<span class='data'>							<label>Candidate    <input type="checkbox" name="status_Candidate"  value="1"  checked="checked" /></label>
+						<label>Approved     <input type="checkbox" name="status_Approved"   value="1"  checked="checked" /></label>
+						<label>Deprecated   <input type="checkbox" name="status_Deprecated" value="1"  /></label>
+				</span>
+			</div>
+
+						<div class='line'>
+				<span class='fieldName'>
+					<input type="submit"  name="Submit" value="Search Test Cases" />
+									</span>
+			</div>
+		</td>
+				</tr>
+		</table>
+	</form>
+</div>
+</div>
+
+<br />
+<h2>Help</h2>
+Most of the fields are described on our wiki page: <a href="http://samate.nist.gov/index.php/SAMATE_Reference_Dataset.html#Dataset_Composition">SAMATE Reference Dataset</a>.
+<h2>Information about the current search engine</h2>
+This search engine does not support boolean operation such as "Description contains: buffer <strong>or</strong> stack".<br />
+And there is no way to have more than one selection in the dropdown list or in the tree at the same time.
+</div>
+<div id="footer">
+	<div class='line'>
+	  <p>
+        <script type="text/javascript">
+	function obfuscate_email(mailto) {
+		email_start = "" + "s" + "amate";
+		if (mailto==1)
+			email_start = "mailto:" + email_start;
+		email_end = "." + "gov";
+		email_middle = "ni" + "st";
+		return email_start + String.fromCharCode(64) + email_middle + email_end;
+	}
+	
+	    </script>
+	    <span class='fieldName' style="margin-top:0;">
+	<em>Contact:&nbsp; <a href="javascript:void(0)" class='external' title="Contact the Samate team" onclick="this.href=obfuscate_email(1);">
+	<script type="text/javascript">document.write(obfuscate_email(0));</script>
+	<!--<noscript> 	SAMATE Team
+	</noscript> -->
+	</a></em><br />
+	This webpage is <a href="http://validator.w3.org/check/referer" title="XHTML Strict (non AJAX pages)" >XHTML Strict</a>
+	 and <a href="http://www.w3.org/WAI/WCAG1AA-Conformance" title="W3C Web accessibility initiative - Accessible AA" >AA</a> compliant. <br />
+	Created on January 2006, last update: June 1, 2013, Version: 4.3<br />
+	        <!-- a href='rss.php' title='Samate Reference Dataset RSS Feed'><img src='images/icons/rss2.gif' alt='RSS Feed' /></a-->
+    </span>
+	    <span class='data'>
+        <a href="http://www.itl.nist.gov/" title="ITL">Information Technology Laboratory</a>, <a href="http://www.itl.nist.gov/div897/" title="Division 897">Software and Systems Division</a>
+        <br/>
+        <a href="http://www.nist.gov/public_affairs/privacy.htm" title="PRIVACY/SECURITY ISSUES">PRIVACY/SECURITY ISSUES</a>
+        &bull; <a href="http://www.nist.gov/admin/foia/foia.htm" title="FOIA">FOIA</a>
+        &bull; <a href="http://www.nist.gov/public_affairs/disclaim.htm" title="Disclaimer">Disclaimer</a>
+        &bull; <a href="http://www.usa.gov" title="USA.gov">USA.gov</a>
+        <br />
+        <a href="http://www.nist.gov" title="National Institute of Standards and Technology">NIST</a> is an agency of the <a href="http://www.doc.gov" title="Department of Commerce">U.S. Commerce Department</a>
+      </span></p>
+  </div>
+</div>
+</body>
+</html>

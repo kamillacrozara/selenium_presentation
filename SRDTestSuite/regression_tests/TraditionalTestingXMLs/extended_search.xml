@@ -1,0 +1,4 @@
+<TestCase casename = "extended_search"> <!-- EXTENDED SEARCH PAGE -->
+    <URL>search.php</URL>
+    <Parameter id="extended"></Parameter>
+  </TestCase>

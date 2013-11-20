@@ -1,0 +1,4 @@
+<TestCase casename = "testcase_4"> <!-- INDIVIDUAL TEST CASE PAGE - NOTE: must have unique casename -->
+    <URL>view_testcase.php</URL>
+    <Parameter id="tID">4</Parameter>
+  </TestCase>

@@ -1,0 +1,31 @@
+#### Change log ####
+
+Version 1.2
+
+	- Regression tests are integrated to the SRD Test Suite;
+
+	- Added messages with information about the tests execution;
+
+	- Added error messages about wrong parameters.
+
+
+Version 1.1
+
+	- Added tests to Search/Download tab tests:
+
+		### Test 4 - Dropdown menus ###
+
+		Verify if the search works properly using the dropdown menus for "Bad/Good/Mixed", "Language" and "Type of Artifact".
+
+
+		### Test 5 - Search by Weakness and Code complexity ###
+
+		In Search/Download > Extended Search verify if the search by Weakness and Code Complexity works properly. 
+
+
+		### Test 5 - Search by date ###
+
+		In Search/Download > Extended Search verify if the search by date works properly.
+
+	
+	- All the logs are written in only one file with the format: selenium_srd_tests_m-d-y-H:M.log

@@ -1,0 +1,509 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="robots" content="index, follow" />
+	<meta name="revisit-after" content="1 days" />
+		<title>SAMATE Reference Dataset </title>
+
+	<script type='text/javascript' src='js/design.js'></script>
+	<script type='text/javascript' src='js/utils.js' ></script>
+
+	<!--[if IE 6]>
+	<script type='text/javascript' src='js/ie6.js'></script>
+	<![endif]-->
+
+	<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+	</script>
+	<script type="text/javascript">
+	_uacct = "UA-437942-2";
+	urchinTracker();
+	</script>
+
+	<link href='css/style-samate.css' rel='stylesheet' type='text/css' />
+				  <!--link rel="alternate" type="application/rss+xml" title="RSS 2.0 for the Samate Reference Dataset" href="http://samate.nist.gov/SRD/rss.php" /-->
+
+</head>
+	<body>	<div id='msg-container'>
+							</div>	
+
+	<!-- Main menu -->
+
+	<div id='top'>
+		<map id="logoMap" name="logoMap">
+		<area href="http://samate.nist.gov" title="SAMATE Website" coords="2,2,85,100" alt="SAMATE Logo"/>
+		<area href="http://nist.gov" title="National Institute of Standards and Technology" coords="95,15,225,65" alt="NIST Logo"/>
+		</map>
+		<img usemap="#logoMap" class='left' src='images/dhs/samate_left.png' alt='The SAMATE Project' />
+		<a href='http://www.dhs.gov' title='Department of Homeland Security' ><img class='right' src='images/dhs/dhs_right_simple.png' alt='Department of Homeland Security' /></a>
+	</div>
+	<div id="menu">
+	<ul>
+		<li ><a href="index.php" title="Home">SRD Home</a></li>
+		<li ><a href="view.php" title="View and download the test cases">View / Download</a></li>
+		<li class='active'><a href="search.php" title="Search in the test cases repository">Search / Download</a></li>
+		<li ><a href="around.php" title="More Downloads: General information, etc.">More Downloads</a></li>
+				<li ><a href='testsuite.php?login=Guest' title='Test Suite Manager'>Test Suites</a></li>
+	</ul>
+	</div>
+
+	<!-- /Menu -->
+<noscript>
+<div id='warning'>
+You need to enable JavaScript to be able to use all the possibilities of this page.
+</div>
+</noscript>
+			<script type='text/javascript'> var nonAjax = true; </script>
+		<script type='text/javascript' src='js/search_Submit.js'></script>
+	
+<!-- Add autocomplete feature from jquery ui -->
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="js/addAutoComplete.js"></script>
+
+<div id="content"> <h1>Search/Download</h1>
+<br />
+	
+
+<ul id="search-menu">
+  <li id="search-nav-1" ><a href="search.php?simple">Search</a></li>
+  <li id="search-nav-2" class='active' ><a href="search.php?extended">Extended Search</a></li>
+  <li id="search-nav-3"  ><a href="search.php?code">Source Code Search</a></li>
+</ul>
+<div id="search_tID" >
+	<div id='viewForm'>
+	<form  name="searchForm"  method="get" action="view.php">
+	<table style='border:0; width:100%;'>
+		<tr style='width:100%'>
+		<td style='border:0; vertical-align: top; width:70%;' >
+			<input name="fromWhere" type="hidden" value="fromSearch" />
+			<input name="flaw" type="hidden" value="Any..." />
+			<input name="codecplx" type="hidden" value="Any..." />
+
+			<div class='line'>
+				<label><span class='fieldName'><strong>Number (Test case ID): </strong></span>
+				<span class='data'><input name="reference" type="text" value="" size="50" maxlength="128" /></span></label>
+			</div>
+			<div class='line'>
+				<label><span class='fieldName'><strong>Description contains: </strong></span>
+				<span class='data'><input name="description" type="text" value="" size="50" maxlength="128" /></span></label>
+			</div>
+
+			<div class='line'>
+				<label><span class='fieldName'>Author:</span>
+				<span class='data'><input name="author" type="text" value="" size="50" maxlength="128" /></span></label>
+			</div>
+			<div class='line'>
+				<label><span class='fieldName'>Contributor:</span>
+				<span class='data'><input name="contributor" type="text" value="" size="50" maxlength="128" /></span></label>
+			</div>
+
+					
+						<div class='line'>
+							
+				<label><span class='fieldName'><acronym title="Bad: A test case with one or more flaws - Good: A test case without known flaws.">
+						Bad / Good / Mixed:
+						</acronym> </span>
+				<span class='data'>
+					<select name='flawed[]'>
+						<option label="Any...">Any...</option>
+						<option label="Bad">Bad</option>
+						<option label="Good">Good</option>
+						<option label="Mixed">Mixed</option>
+					</select>
+				</span></label>
+			</div>
+			<div class='line'>
+				<label><span class='fieldName'>Language: </span>
+				<span class='data'>
+					<select name='languages[]'>
+					<option label="Any...">Any...</option>
+										<option value="C">C</option>
+										<option value="C++">C++</option>
+										<option value="Java">Java</option>
+										<option value="Ada">Ada</option>
+										<option value="PHP">PHP</option>
+										<option value="Python">Python</option>
+										<option value="C#">C#</option>
+										</select>
+				</span></label>
+			</div>
+			<div class='line'>
+				<label><span class='fieldName'>Type of Artifact: </span>
+				<span class='data'>
+					<select name='typesofartifacts[]'>
+						<option label="Any...">Any...</option>
+										<option  value="Source Code">Source Code</option>
+										<option  value="Binary">Binary</option>
+										<option  value="Pseudo Code">Pseudo Code</option>
+										<option  value="Mix Of Artifact">Mix Of Artifact</option>
+										</select>
+				</span></label>
+			</div>
+			
+			<div class='line'>
+				<span class='fieldName'>Status:</span>
+				<span class='data'>							<label>Candidate    <input type="checkbox" name="status_Candidate"  value="1"  checked="checked" /></label>
+						<label>Approved     <input type="checkbox" name="status_Approved"   value="1"  checked="checked" /></label>
+						<label>Deprecated   <input type="checkbox" name="status_Deprecated" value="1"  /></label>
+				</span>
+			</div>
+
+												<div class='line'>						<span class='fieldName'><label for="flaw_sel" >Weakness:</label> <br /><a href="javascript:resetSelectedFlaw()" title="Reset the selected flaw">reset</a> </span>
+						<span class='data'>
+						<select id="flaw_sel" name='typesofflaws_1'>
+							<option value="Any...">Any...</option>
+														<option value="CWE-843: Access of Resource Using Incompatible Type (Type Confusion)">--+ CWE-843: Access of Resource Using Incompatible Type (Type Confusion)</option>
+														<option value="CWE-835: Loop with Unreachable Exit Condition (Infinite Loop)">--+ CWE-835: Loop with Unreachable Exit Condition (Infinite Loop)</option>
+														<option value="CWE-506: Embedded Malicious Code">--+ CWE-506: Embedded Malicious Code</option>
+														<option value="CWE-510: Trapdoor">----+ CWE-510: Trapdoor</option>
+														<option value="CWE-434: Unrestricted Upload of File with Dangerous Type">--+ CWE-434: Unrestricted Upload of File with Dangerous Type</option>
+														<option value="CWE-019: Data Handling">--+ CWE-019: Data Handling</option>
+														<option value="CWE-539: Information Exposure Through Persistent Cookies">----+ CWE-539: Information Exposure Through Persistent Cookies</option>
+														<option value="CWE-526: Information Exposure Through Environmental Variables">----+ CWE-526: Information Exposure Through Environmental Variables</option>
+														<option value="CWE-228: Improper Handling of Syntactically Invalid Structure">----+ CWE-228: Improper Handling of Syntactically Invalid Structure</option>
+														<option value="CWE-241: Improper Handling of Unexpected Data Type">------+ CWE-241: Improper Handling of Unexpected Data Type</option>
+														<option value="CWE-239: Failure to Handle Incomplete Element">------+ CWE-239: Failure to Handle Incomplete Element</option>
+														<option value="CWE-111: Unsafe JNI">----+ CWE-111: Unsafe JNI</option>
+														<option value="CWE-182: Data Collapse Unsafe">----+ CWE-182: Data Collapse Unsafe</option>
+														<option value="CWE-180: Incorrect Order">----+ CWE-180: Incorrect Order</option>
+														<option value="CWE-209: Information Leak Error">----+ CWE-209: Information Leak Error</option>
+														<option value="CWE-598: Information Leak QueryString">----+ CWE-598: Information Leak QueryString</option>
+														<option value="CWE-133: String Errors">----+ CWE-133: String Errors</option>
+														<option value="CWE-134: Uncontrolled Format String">------+ CWE-134: Uncontrolled Format String</option>
+														<option value="CWE-135: Incorrect Calculation of Multibyte String Length">------+ CWE-135: Incorrect Calculation of Multibyte String Length</option>
+														<option value="CWE-187: Partial Comparison">----+ CWE-187: Partial Comparison</option>
+														<option value="CWE-170: Improper Null Termination">----+ CWE-170: Improper Null Termination</option>
+														<option value="CWE-188: Reliance On Data Memory Layout">----+ CWE-188: Reliance On Data Memory Layout</option>
+														<option value="CWE-129: Improper Validation Of Array Index">----+ CWE-129: Improper Validation Of Array Index</option>
+														<option value="CWE-190: Integer Overflow">----+ CWE-190: Integer Overflow</option>
+														<option value="CWE-194: Unexpected Sign Extension">----+ CWE-194: Unexpected Sign Extension</option>
+														<option value="CWE-195: Signed To Unsigned Conversion">----+ CWE-195: Signed To Unsigned Conversion</option>
+														<option value="CWE-196: Unsigned To Signed Conversion Error">----+ CWE-196: Unsigned To Signed Conversion Error</option>
+														<option value="CWE-197: Numeric Truncation Error">----+ CWE-197: Numeric Truncation Error</option>
+														<option value="CWE-191: Integer Underflow">----+ CWE-191: Integer Underflow</option>
+														<option value="CWE-193: Off by One Error">----+ CWE-193: Off by One Error</option>
+														<option value="CWE-369: Divide By Zero">----+ CWE-369: Divide By Zero</option>
+														<option value="CWE-204: Response Discrepancy Information Leak">----+ CWE-204: Response Discrepancy Information Leak</option>
+														<option value="CWE-535: Info Leak Shell Error">----+ CWE-535: Info Leak Shell Error</option>
+														<option value="CWE-226: Sensitive Information Uncleared Before Release">----+ CWE-226: Sensitive Information Uncleared Before Release</option>
+														<option value="CWE-222: Truncation Of Security Relevant Information">----+ CWE-222: Truncation Of Security Relevant Information</option>
+														<option value="CWE-223: Omission Of Security Relevant Information">----+ CWE-223: Omission Of Security Relevant Information</option>
+														<option value="CWE-464: Insertion Of Data Structure Sentinel">----+ CWE-464: Insertion Of Data Structure Sentinel</option>
+														<option value="CWE-118: Improper Access of Indexable Resource (Range Error)">----+ CWE-118: Improper Access of Indexable Resource (Range Error)</option>
+														<option value="CWE-119: Failure To Constrain Operations within the Bounds of an Allocated Memory Buffer">------+ CWE-119: Failure To Constrain Operations within the Bounds of an Allocated Memory Buffer</option>
+														<option value="CWE-824: Access of Uninitialized Pointer">--------+ CWE-824: Access of Uninitialized Pointer</option>
+														<option value="CWE-822: Untrusted Pointer Dereference">--------+ CWE-822: Untrusted Pointer Dereference</option>
+														<option value="CWE-806: Buffer Access Using Size of Source Buffer">--------+ CWE-806: Buffer Access Using Size of Source Buffer</option>
+														<option value="CWE-805: Buffer Access with Incorrect Length Value">--------+ CWE-805: Buffer Access with Incorrect Length Value</option>
+														<option value="CWE-120: Buffer Copy without Checking Size of Input">--------+ CWE-120: Buffer Copy without Checking Size of Input</option>
+														<option value="CWE-123: Write What Where Condition">--------+ CWE-123: Write What Where Condition</option>
+														<option value="CWE-131: Incorrect Calculation of Buffer Size">--------+ CWE-131: Incorrect Calculation of Buffer Size</option>
+														<option value="CWE-121: Stack Based Buffer Overflow">--------+ CWE-121: Stack Based Buffer Overflow</option>
+														<option value="CWE-122: Heap Based Buffer Overflow">--------+ CWE-122: Heap Based Buffer Overflow</option>
+														<option value="CWE-126: Buffer Overread">--------+ CWE-126: Buffer Overread</option>
+														<option value="CWE-127: Buffer Underread">--------+ CWE-127: Buffer Underread</option>
+														<option value="CWE-020: Insufficient Input Validation">------+ CWE-020: Insufficient Input Validation</option>
+														<option value="CWE-073: External Control of File Name or Path">--------+ CWE-073: External Control of File Name or Path</option>
+														<option value="CWE-021: Pathname Traversal and Equivalence Errors">--------+ CWE-021: Pathname Traversal and Equivalence Errors</option>
+														<option value="CWE-041: Improper Resolution of Path Equivalence">----------+ CWE-041: Improper Resolution of Path Equivalence</option>
+														<option value="CWE-022: Path Traversal">----------+ CWE-022: Path Traversal</option>
+														<option value="CWE-176: Improper Handling of Unicode Encoding">------------+ CWE-176: Improper Handling of Unicode Encoding</option>
+														<option value="CWE-023: Relative Path Traversal">------------+ CWE-023: Relative Path Traversal</option>
+														<option value="CWE-036: Absolute Path Traversal">------------+ CWE-036: Absolute Path Traversal</option>
+														<option value="CWE-114: Process Control">--------+ CWE-114: Process Control</option>
+														<option value="CWE-601: Open Redirect">--------+ CWE-601: Open Redirect</option>
+														<option value="CWE-124: Buffer Underwrite">--------+ CWE-124: Buffer Underwrite</option>
+														<option value="CWE-470: Use of Externally-Controlled Input to Select Classes or Code (Unsafe Reflection)">--------+ CWE-470: Use of Externally-Controlled Input to Select Classes or Code (Unsafe Reflection)</option>
+														<option value="CWE-606: Unchecked Loop Condition">--------+ CWE-606: Unchecked Loop Condition</option>
+														<option value="CWE-074: Failure to Sanitize Data into a Different Plane (Injection)">--------+ CWE-074: Failure to Sanitize Data into a Different Plane (Injection)</option>
+														<option value="CWE-099: Insufficient Control of Resource Identifiers (Resource Injection)">----------+ CWE-099: Insufficient Control of Resource Identifiers (Resource Injection)</option>
+														<option value="CWE-079: Failure to Sanitize Directives in a Web Page (Cross-site scripting XSS)">----------+ CWE-079: Failure to Sanitize Directives in a Web Page (Cross-site scripting XSS)</option>
+														<option value="CWE-083: XSS Attribute">------------+ CWE-083: XSS Attribute</option>
+														<option value="CWE-081: XSS Error Message">------------+ CWE-081: XSS Error Message</option>
+														<option value="CWE-080: XSS">------------+ CWE-080: XSS</option>
+														<option value="CWE-077: Failure to Sanitize Data into a Control Plane (Command Injection)">----------+ CWE-077: Failure to Sanitize Data into a Control Plane (Command Injection)</option>
+														<option value="CWE-088: Argument Injection or Modification">------------+ CWE-088: Argument Injection or Modification</option>
+														<option value="CWE-090: LDAP Injection">----------+ CWE-090: LDAP Injection</option>
+														<option value="CWE-078: OS Command Injection">----------+ CWE-078: OS Command Injection</option>
+														<option value="CWE-089: Failure to Sanitize Data within SQL Queries (SQL injection)">----------+ CWE-089: Failure to Sanitize Data within SQL Queries (SQL injection)</option>
+														<option value="CWE-564: SQL Injection: Hibernate">------------+ CWE-564: SQL Injection: Hibernate</option>
+														<option value="CWE-643: Unsafe Treatment of XPath Input">----------+ CWE-643: Unsafe Treatment of XPath Input</option>
+														<option value="CWE-098: Insufficient Control of Filename for Include/Require Statement in PHP Program (PHP File Inclusion)">----------+ CWE-098: Insufficient Control of Filename for Include/Require Statement in PHP Program (PHP File Inclusion)</option>
+														<option value="CWE-607: Public Static Final Mutable">--------+ CWE-607: Public Static Final Mutable</option>
+														<option value="CWE-785: Path Manipulation Function Without Max Sized Buffer">--------+ CWE-785: Path Manipulation Function Without Max Sized Buffer</option>
+														<option value="CWE-497: Information Leak of System Data">----+ CWE-497: Information Leak of System Data</option>
+														<option value="CWE-681: Incorrect Conversion between Numeric Types">----+ CWE-681: Incorrect Conversion between Numeric Types</option>
+														<option value="CWE-254: Security Features">--+ CWE-254: Security Features</option>
+														<option value="CWE-325: Missing Required Cryptographic Step">----+ CWE-325: Missing Required Cryptographic Step</option>
+														<option value="CWE-255: Credentials Management">----+ CWE-255: Credentials Management</option>
+														<option value="CWE-256: Plaintext Storage of Password">------+ CWE-256: Plaintext Storage of Password</option>
+														<option value="CWE-257: Storing Password Recoverable Format">------+ CWE-257: Storing Password Recoverable Format</option>
+														<option value="CWE-523: Unprotected Cred Transport">------+ CWE-523: Unprotected Cred Transport</option>
+														<option value="CWE-620: Unverified Password Change">------+ CWE-620: Unverified Password Change</option>
+														<option value="CWE-549: Missing Password Masking">------+ CWE-549: Missing Password Masking</option>
+														<option value="CWE-259: Hard Coded Password">------+ CWE-259: Hard Coded Password</option>
+														<option value="CWE-315: Plaintext Storage in a Cookie">----+ CWE-315: Plaintext Storage in a Cookie</option>
+														<option value="CWE-614: Sensitive Cookie Without Secure">----+ CWE-614: Sensitive Cookie Without Secure</option>
+														<option value="CWE-293: Using Referer Field for Authentication">----+ CWE-293: Using Referer Field for Authentication</option>
+														<option value="CWE-300: Channel Accessible by NonEndpoint">----+ CWE-300: Channel Accessible by NonEndpoint</option>
+														<option value="CWE-603: Client Side Authentication">----+ CWE-603: Client Side Authentication</option>
+														<option value="CWE-352: Cross Site Request Forgery">----+ CWE-352: Cross Site Request Forgery</option>
+														<option value="CWE-613: Insufficient Session Expiration">------+ CWE-613: Insufficient Session Expiration</option>
+														<option value="CWE-330 Insufficiently Random Values">----+ CWE-330 Insufficiently Random Values</option>
+														<option value="CWE-336: Same Seed in PRNG">------+ CWE-336: Same Seed in PRNG</option>
+														<option value="CWE-272: Least Privilege Principal">----+ CWE-272: Least Privilege Principal</option>
+														<option value="CWE-273: Improper Check for Dropped Privileges">----+ CWE-273: Improper Check for Dropped Privileges</option>
+														<option value="CWE-284: Access Control Issues">----+ CWE-284: Access Control Issues</option>
+														<option value="CWE-566: Access Through SQL Primary">------+ CWE-566: Access Through SQL Primary</option>
+														<option value="CWE-565: Cookies In Security Decision">----+ CWE-565: Cookies In Security Decision</option>
+														<option value="CWE-321: Hard Coded Cryptographic Key">----+ CWE-321: Hard Coded Cryptographic Key</option>
+														<option value="CWE-319: Plaintext Tx Sensitive Info">----+ CWE-319: Plaintext Tx Sensitive Info</option>
+														<option value="CWE-326: Weak Encryption">----+ CWE-326: Weak Encryption</option>
+														<option value="CWE-327: Use Broken Crypto">----+ CWE-327: Use Broken Crypto</option>
+														<option value="CWE-780: Use of RSA Algorithm without OAEP">------+ CWE-780: Use of RSA Algorithm without OAEP</option>
+														<option value="CWE-759: Unsalted One Way Hash">------+ CWE-759: Unsalted One Way Hash</option>
+														<option value="CWE-760: Predictable Salt One Way Hash">------+ CWE-760: Predictable Salt One Way Hash</option>
+														<option value="CWE-329: Not Using Random IV with CBC Mode">----+ CWE-329: Not Using Random IV with CBC Mode</option>
+														<option value="CWE-328: Reversible Oneway Hash">----+ CWE-328: Reversible Oneway Hash</option>
+														<option value="CWE-338: Weak PRNG">----+ CWE-338: Weak PRNG</option>
+														<option value="CWE-361: Time and State">--+ CWE-361: Time and State</option>
+														<option value="CWE-667: Improper Locking">----+ CWE-667: Improper Locking</option>
+														<option value="CWE-833: Deadlock">------+ CWE-833: Deadlock</option>
+														<option value="CWE-832: Unlock of a Resource that is not Locked">------+ CWE-832: Unlock of a Resource that is not Locked</option>
+														<option value="CWE-765: Multiple Unlocks of a Critical Resource">------+ CWE-765: Multiple Unlocks of a Critical Resource</option>
+														<option value="CWE-764: Multiple Locks of a Critical Resource">------+ CWE-764: Multiple Locks of a Critical Resource</option>
+														<option value="CWE-609: Double-Checked Locking">----+ CWE-609: Double-Checked Locking</option>
+														<option value="CWE-567: Unsynchronized Shared Data">----+ CWE-567: Unsynchronized Shared Data</option>
+														<option value="CWE-572: Call to Thread run Instead of start">----+ CWE-572: Call to Thread run Instead of start</option>
+														<option value="CWE-374: Passing Mutable Objects to Untrusted Method">----+ CWE-374: Passing Mutable Objects to Untrusted Method</option>
+														<option value="CWE-377: Insecure Temporary File">----+ CWE-377: Insecure Temporary File</option>
+														<option value="CWE-672: Operation on Resource After Expiration or Release">----+ CWE-672: Operation on Resource After Expiration or Release</option>
+														<option value="CWE-362: Race Condition">----+ CWE-362: Race Condition</option>
+														<option value="CWE-364: Signal Handler Race Condition">------+ CWE-364: Signal Handler Race Condition</option>
+														<option value="CWE-366: Race Condition Within a Thread">------+ CWE-366: Race Condition Within a Thread</option>
+														<option value="CWE-367: TOC TOU">------+ CWE-367: TOC TOU</option>
+														<option value="CWE-365: Race Condition in Switch">--------+ CWE-365: Race Condition in Switch</option>
+														<option value="CWE-378: Creation of File with Insecure Perms">------+ CWE-378: Creation of File with Insecure Perms</option>
+														<option value="CWE-379: File Creation in Insecure Dir">------+ CWE-379: File Creation in Insecure Dir</option>
+														<option value="CWE-698: Redirect Without Exit">----+ CWE-698: Redirect Without Exit</option>
+														<option value="CWE-383: Direct Use Of Threads">----+ CWE-383: Direct Use Of Threads</option>
+														<option value="CWE-382: J2EE Bad Practices Use of System Exit">----+ CWE-382: J2EE Bad Practices Use of System Exit</option>
+														<option value="CWE-674: Uncontrolled Recursion">----+ CWE-674: Uncontrolled Recursion</option>
+														<option value="CWE-663: Use Non Reentrant Function Unsync">----+ CWE-663: Use Non Reentrant Function Unsync</option>
+														<option value="CWE-388: Error Handling">--+ CWE-388: Error Handling</option>
+														<option value="CWE-389: Error Conditions, Return Values, Status Codes">----+ CWE-389: Error Conditions, Return Values, Status Codes</option>
+														<option value="CWE-390: Error Without Action">------+ CWE-390: Error Without Action</option>
+														<option value="CWE-391: Unchecked Error Condition">------+ CWE-391: Unchecked Error Condition</option>
+														<option value="CWE-392: Failure to Report Error in Status Code">------+ CWE-392: Failure to Report Error in Status Code</option>
+														<option value="CWE-584: Return in Finally">------+ CWE-584: Return in Finally</option>
+														<option value="CWE-395: NullPointerException Catch">------+ CWE-395: NullPointerException Catch</option>
+														<option value="CWE-396: Catch Generic Exception">------+ CWE-396: Catch Generic Exception</option>
+														<option value="CWE-397: Throw Generic Exception">------+ CWE-397: Throw Generic Exception</option>
+														<option value="CWE-600: Fail Catch Exceptions">----+ CWE-600: Fail Catch Exceptions</option>
+														<option value="CWE-579: J2EE Non Serializable">----+ CWE-579: J2EE Non Serializable</option>
+														<option value="CWE-581: Object Model Violation">----+ CWE-581: Object Model Violation</option>
+														<option value="CWE-580: Clone Without Super">----+ CWE-580: Clone Without Super</option>
+														<option value="CWE-113: HTTP Response Splitting">--+ CWE-113: HTTP Response Splitting</option>
+														<option value="CWE-479: Unsafe Call from a Signal Handler">--+ CWE-479: Unsafe Call from a Signal Handler</option>
+														<option value="CWE-440: Expected Behavior Violation">--+ CWE-440: Expected Behavior Violation</option>
+														<option value="CWE-457: Use of Uninitialized Variable">--+ CWE-457: Use of Uninitialized Variable</option>
+														<option value="CWE-459: Incomplete Cleanup">--+ CWE-459: Incomplete Cleanup</option>
+														<option value="CWE-465: Pointer Issues">--+ CWE-465: Pointer Issues</option>
+														<option value="CWE-466: Return of Pointer Value Outside of Expected Range">----+ CWE-466: Return of Pointer Value Outside of Expected Range</option>
+														<option value="CWE-467: Use of sizeof on Pointer Type">----+ CWE-467: Use of sizeof on Pointer Type</option>
+														<option value="CWE-468: Incorrect Pointer Scaling">----+ CWE-468: Incorrect Pointer Scaling</option>
+														<option value="CWE-469: Use of Pointer Subtraction to Determine Size">----+ CWE-469: Use of Pointer Subtraction to Determine Size</option>
+														<option value="CWE-476: NULL Pointer Dereference">----+ CWE-476: NULL Pointer Dereference</option>
+														<option value="CWE-587: Assignment of Fixed Address to Pointer">----+ CWE-587: Assignment of Fixed Address to Pointer</option>
+														<option value="CWE-588: Attempt to Access Child of a Non Structure Pointer">----+ CWE-588: Attempt to Access Child of a Non Structure Pointer</option>
+														<option value="CWE-227: Failure to Fulfill API contract (API Abuse)">--+ CWE-227: Failure to Fulfill API contract (API Abuse)</option>
+														<option value="CWE-251: Often Misused: String Management">----+ CWE-251: Often Misused: String Management</option>
+														<option value="CWE-560: Use of umask With chmod Style Argument">----+ CWE-560: Use of umask With chmod Style Argument</option>
+														<option value="CWE-685: Function Call with Incorrect Number of Arguments">----+ CWE-685: Function Call with Incorrect Number of Arguments</option>
+														<option value="CWE-688: Function Call with Incorrect Variable or Reference as Argument">----+ CWE-688: Function Call with Incorrect Variable or Reference as Argument</option>
+														<option value="CWE-242: Use of Inherently Dangerous Function">----+ CWE-242: Use of Inherently Dangerous Function</option>
+														<option value="CWE-244: Failure to Clear Heap Before Release">----+ CWE-244: Failure to Clear Heap Before Release</option>
+														<option value="CWE-247: Reliance on DNS Lookups in a Security Decision">----+ CWE-247: Reliance on DNS Lookups in a Security Decision</option>
+														<option value="CWE-248: Uncaught Exception">----+ CWE-248: Uncaught Exception</option>
+														<option value="CWE-252: Unchecked Return Value">----+ CWE-252: Unchecked Return Value</option>
+														<option value="CWE-253: Incorrect Check of Function Return Value">----+ CWE-253: Incorrect Check of Function Return Value</option>
+														<option value="CWE-605: Multiple Binds Same Port">----+ CWE-605: Multiple Binds Same Port</option>
+														<option value="CWE-398: Indicator of Poor Code Quality">--+ CWE-398: Indicator of Poor Code Quality</option>
+														<option value="CWE-585: Empty Sync Block">----+ CWE-585: Empty Sync Block</option>
+														<option value="CWE-586: Explicit Call to Finalize">----+ CWE-586: Explicit Call to Finalize</option>
+														<option value="CWE-411: Resource Locking Problems">----+ CWE-411: Resource Locking Problems</option>
+														<option value="CWE-412: Unresticted Lock on Critical Resource">------+ CWE-412: Unresticted Lock on Critical Resource</option>
+														<option value="CWE-591: Sensitive Data Storage in Improperly Locked Memory">------+ CWE-591: Sensitive Data Storage in Improperly Locked Memory</option>
+														<option value="CWE-417: Channel and Path Errors">----+ CWE-417: Channel and Path Errors</option>
+														<option value="CWE-427: Uncontrolled Search Path Element">------+ CWE-427: Uncontrolled Search Path Element</option>
+														<option value="CWE-426: Untrusted Search Path">------+ CWE-426: Untrusted Search Path</option>
+														<option value="CWE-400: Resource Exhaustion">----+ CWE-400: Resource Exhaustion</option>
+														<option value="CWE-775: Missing Release of File Descriptor or Handle after Effective Lifetime">------+ CWE-775: Missing Release of File Descriptor or Handle after Effective Lifetime</option>
+														<option value="CWE-773: Missing Reference to Active File Descriptor or Handle">------+ CWE-773: Missing Reference to Active File Descriptor or Handle</option>
+														<option value="CWE-789: Uncontrolled Memory Allocation">------+ CWE-789: Uncontrolled Memory Allocation</option>
+														<option value="CWE-401: Memory Leak">----+ CWE-401: Memory Leak</option>
+														<option value="CWE-404: Improper Resource Shutdown">----+ CWE-404: Improper Resource Shutdown</option>
+														<option value="CWE-415: Double Free">----+ CWE-415: Double Free</option>
+														<option value="CWE-413: Insufficient Resource Locking">----+ CWE-413: Insufficient Resource Locking</option>
+														<option value="CWE-416: Use After Free">----+ CWE-416: Use After Free</option>
+														<option value="CWE-568: finalize Method Without superfinalize">----+ CWE-568: finalize Method Without superfinalize</option>
+														<option value="CWE-590: Free of Invalid Pointer Not on the Heap">----+ CWE-590: Free of Invalid Pointer Not on the Heap</option>
+														<option value="CWE-761: Free Pointer Not at Start of Buffer">----+ CWE-761: Free Pointer Not at Start of Buffer</option>
+														<option value="CWE-762: Mismatched Memory Management Routines">----+ CWE-762: Mismatched Memory Management Routines</option>
+														<option value="CWE-480: Use of Incorrect Operator">----+ CWE-480: Use of Incorrect Operator</option>
+														<option value="CWE-481: Assigning Instead of Comparing">------+ CWE-481: Assigning Instead of Comparing</option>
+														<option value="CWE-482: Comparing Instead of Assigning">------+ CWE-482: Comparing Instead of Assigning</option>
+														<option value="CWE-597: Wrong Operator String Comparison">------+ CWE-597: Wrong Operator String Comparison</option>
+														<option value="CWE-475: Undefined Behavior for Input to API">----+ CWE-475: Undefined Behavior for Input to API</option>
+														<option value="CWE-477: Obsolete Functions">----+ CWE-477: Obsolete Functions</option>
+														<option value="CWE-478: Failure to Use Default Case in Switch">----+ CWE-478: Failure to Use Default Case in Switch</option>
+														<option value="CWE-483: Incorrect Clock Delimitation">----+ CWE-483: Incorrect Clock Delimitation</option>
+														<option value="CWE-484: Omitted Break Statement">----+ CWE-484: Omitted Break Statement</option>
+														<option value="CWE-546: Suspicious Comment">----+ CWE-546: Suspicious Comment</option>
+														<option value="CWE-547: Hardcoded Security Constants">----+ CWE-547: Hardcoded Security Constants</option>
+														<option value="CWE-561: Dead Code">----+ CWE-561: Dead Code</option>
+														<option value="CWE-570: Expression Always False">------+ CWE-570: Expression Always False</option>
+														<option value="CWE-571: Expression Always True">------+ CWE-571: Expression Always True</option>
+														<option value="CWE-562: Return of Stack Variable Address">----+ CWE-562: Return of Stack Variable Address</option>
+														<option value="CWE-563: Unused Variable">----+ CWE-563: Unused Variable</option>
+														<option value="CWE-617: Reachable Assertion">----+ CWE-617: Reachable Assertion</option>
+														<option value="CWE-676: Use of Potentially Dangerous Function">----+ CWE-676: Use of Potentially Dangerous Function</option>
+														<option value="CWE-485: Insufficient Encapsulation">--+ CWE-485: Insufficient Encapsulation</option>
+														<option value="CWE-486: Compare Classes By Name">----+ CWE-486: Compare Classes By Name</option>
+														<option value="CWE-500: Public Static Field Not Marked Final">----+ CWE-500: Public Static Field Not Marked Final</option>
+														<option value="CWE-489: Leftover Debug Code">----+ CWE-489: Leftover Debug Code</option>
+														<option value="CWE-582: Array Public Final Static">----+ CWE-582: Array Public Final Static</option>
+														<option value="CWE-491: Object Hijack">----+ CWE-491: Object Hijack</option>
+														<option value="CWE-495: Private Array-Typed Field Returned from a Public Method">----+ CWE-495: Private Array-Typed Field Returned from a Public Method</option>
+														<option value="CWE-496: Public Data Assigned to Private Array-Typed Field">----+ CWE-496: Public Data Assigned to Private Array-Typed Field</option>
+														<option value="CWE-499: Sensitive Data Serializable">----+ CWE-499: Sensitive Data Serializable</option>
+														<option value="CWE-015: External Control of System or Configuration Setting">--+ CWE-015: External Control of System or Configuration Setting</option>
+														<option value="CWE-534: Info Leak Debug Log">--+ CWE-534: Info Leak Debug Log</option>
+														<option value="CWE-511: Logic Time Bomb">--+ CWE-511: Logic Time Bomb</option>
+														<option value="CWE-680: Integer Overflow to Buffer Overflow">--+ CWE-680: Integer Overflow to Buffer Overflow</option>
+														<option value="CWE-690: Null Defer from Return">--+ CWE-690: Null Defer from Return</option>
+														<option value="CWE-758: Undefined Behavior">--+ CWE-758: Undefined Behavior</option>
+														<option value="CWE-772: Missing Release of Resource after Effective Lifetime">--+ CWE-772: Missing Release of Resource after Effective Lifetime</option>
+														<option value="CWE-675: Duplicate Operations on Resource">--+ CWE-675: Duplicate Operations on Resource</option>
+														<option value="CWE-666: Operation on Resource in Wrong Phase of Lifetime">--+ CWE-666: Operation on Resource in Wrong Phase of Lifetime</option>
+														<option value="CWE-665: Improper Initialization">--+ CWE-665: Improper Initialization</option>
+														<option value="CWE-533: Info Leak Server Log">--+ CWE-533: Info Leak Server Log</option>
+														<option value="CWE-615: Info Leak By Comment">--+ CWE-615: Info Leak By Comment</option>
+													</select>
+						</span>
+					</div>
+
+					<div class='line'>
+					<span class='fieldName'><label for="complex_sel" >Code complexity:</label><br /><a href="javascript:resetSelectedCCplx()" title="Reset the selected code complexity">reset</a> </span>
+						<span class='data'>
+							<select id="complex_sel" name="codecplx_1">
+								<option  value="Any...">Any...</option>
+																	<option  value="address alias level">address alias level</option>
+																	<option  value="array address complexity">array address complexity</option>
+																	<option  value="array index complexity">array index complexity</option>
+																	<option  value="array length/limit complexity">array length/limit complexity</option>
+																	<option  value="asynchronous">asynchronous</option>
+																	<option  value="bound violation">bound violation</option>
+																	<option  value="buffer address type">buffer address type</option>
+																	<option  value="container">container</option>
+																	<option  value="data type">data type</option>
+																	<option  value="index alias level">index alias level</option>
+																	<option  value="local control flow">local control flow</option>
+																	<option  value="loop complexity">loop complexity</option>
+																	<option  value="loop structure">loop structure</option>
+																	<option  value="memory access">memory access</option>
+																	<option  value="memory location">memory location</option>
+																	<option  value="None/Other">None/Other</option>
+																	<option  value="overflow magnitude">overflow magnitude</option>
+																	<option  value="overflow type">overflow type</option>
+																	<option  value="pointer">pointer</option>
+																	<option  value="runtime environment dependency">runtime environment dependency</option>
+																	<option  value="scope">scope</option>
+																	<option  value="signed unsigned mismatch">signed unsigned mismatch</option>
+																	<option  value="taint">taint</option>
+															</select>
+						</span>
+					</div>
+							 			<div class='line'> <fieldset style="border:0;"><legend style="display:none;">Date Options:</legend>  				<label><span class='fieldName'>
+					Query&nbsp;Date:<br />
+					(Format: M/d/Y)
+									</span>
+				<span class='data' id="dateChooser">
+					<input type='text' style='font: 11px tahoma;'  name='date'  />
+				</span></label>				
+				<div id="cleaner_1"> 				<span class='data'>
+					
+						<label><input type="radio" name="typeDate" value="Any..." checked="checked" />
+						Any</label>
+						<label><input type="radio" name="typeDate" value="Before"/>
+						Before</label>
+						<label><input type="radio" name="typeDate" value="On"/>
+						On</label>
+						<label><input type="radio" name="typeDate" value="After" />
+						After</label>
+						<br />											
+				</span>
+				</div></fieldset>
+			</div>
+						<div class='line'>
+				<span class='fieldName'>
+					<input type="submit" onclick="return Submit_Search()" name="Submit" value="Search Test Cases" />
+									</span>
+			</div>
+		</td>
+				</tr>
+		</table>
+	</form>
+</div>
+</div>
+
+<br />
+<h2>Help</h2>
+Most of the fields are described on our wiki page: <a href="http://samate.nist.gov/index.php/SAMATE_Reference_Dataset.html#Dataset_Composition">SAMATE Reference Dataset</a>.
+<h2>Information about the current search engine</h2>
+This search engine does not support boolean operation such as "Description contains: buffer <strong>or</strong> stack".<br />
+And there is no way to have more than one selection in the dropdown list or in the tree at the same time.
+</div>
+<div id="footer">
+	<div class='line'>
+	  <p>
+        <script type="text/javascript">
+	function obfuscate_email(mailto) {
+		email_start = "" + "s" + "amate";
+		if (mailto==1)
+			email_start = "mailto:" + email_start;
+		email_end = "." + "gov";
+		email_middle = "ni" + "st";
+		return email_start + String.fromCharCode(64) + email_middle + email_end;
+	}
+	
+	    </script>
+	    <span class='fieldName' style="margin-top:0;">
+	<em>Contact:&nbsp; <a href="javascript:void(0)" class='external' title="Contact the Samate team" onclick="this.href=obfuscate_email(1);">
+	<script type="text/javascript">document.write(obfuscate_email(0));</script>
+	<!--<noscript> 	SAMATE Team
+	</noscript> -->
+	</a></em><br />
+	This webpage is <a href="http://validator.w3.org/check/referer" title="XHTML Strict (non AJAX pages)" >XHTML Strict</a>
+	 and <a href="http://www.w3.org/WAI/WCAG1AA-Conformance" title="W3C Web accessibility initiative - Accessible AA" >AA</a> compliant. <br />
+	Created on January 2006, last update: June 1, 2013, Version: 4.3<br />
+	        <!-- a href='rss.php' title='Samate Reference Dataset RSS Feed'><img src='images/icons/rss2.gif' alt='RSS Feed' /></a-->
+    </span>
+	    <span class='data'>
+        <a href="http://www.itl.nist.gov/" title="ITL">Information Technology Laboratory</a>, <a href="http://www.itl.nist.gov/div897/" title="Division 897">Software and Systems Division</a>
+        <br/>
+        <a href="http://www.nist.gov/public_affairs/privacy.htm" title="PRIVACY/SECURITY ISSUES">PRIVACY/SECURITY ISSUES</a>
+        &bull; <a href="http://www.nist.gov/admin/foia/foia.htm" title="FOIA">FOIA</a>
+        &bull; <a href="http://www.nist.gov/public_affairs/disclaim.htm" title="Disclaimer">Disclaimer</a>
+        &bull; <a href="http://www.usa.gov" title="USA.gov">USA.gov</a>
+        <br />
+        <a href="http://www.nist.gov" title="National Institute of Standards and Technology">NIST</a> is an agency of the <a href="http://www.doc.gov" title="Department of Commerce">U.S. Commerce Department</a>
+      </span></p>
+  </div>
+</div>
+</body>
+</html>

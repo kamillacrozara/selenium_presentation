@@ -1,0 +1,24 @@
+<TestCase casename = "view_es"> <!-- EXTENDED SEARCH PARAMETERS -->
+      <URL>view.php</URL>
+      <Parameter id="reference"></Parameter>
+  	<Parameter id="description"></Parameter>
+  	<Parameter id="author"></Parameter>
+  	<Parameter id="contributor"></Parameter>
+  	<Parameter id="flawed[]">Bad</Parameter>
+  	<Parameter id="languages[]">Any...</Parameter>
+  	<Parameter id="typesofartifacts[]">Source+Code</Parameter>
+  	<Parameter id="status_Candidate">1</Parameter>
+  	<Parameter id="status_Approved">1</Parameter>
+  	<Parameter id="status_Deprecated"></Parameter>
+  	<Parameter id="fromWhere">fromSearch</Parameter>
+  	<Parameter id="typesofflaws_1">Any...</Parameter>	<!-- Only in Extended Search -->
+  	<Parameter id="codecplx_1">.</Parameter>			<!-- Only in Extended Search -->
+  	<Parameter id="typeDate">All</Parameter>			<!-- Only in Extended Search -->
+  	<Parameter id="date"></Parameter>					<!-- Only in Extended Search -->
+  	<Parameter id="flaw_ro">Any...</Parameter>			<!-- Only in Extended Search -->
+  	<Parameter id="codecplx_ro">Any...</Parameter> 		<!-- Only in Extended Search -->
+  	<Parameter id="submit">Search+Test+Cases</Parameter>
+  	<Parameter id="first"></Parameter> <!-- Start displaying after the first # of test cases) -->
+  	<Parameter id="sort">asc</Parameter> <!-- Ascending(default)="asc" or Descending="desc" -->
+  	<Parameter id="count">20</Parameter> <!-- Number of test cases displayed (default=20) -->
+  </TestCase>

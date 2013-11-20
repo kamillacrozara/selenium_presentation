@@ -1,0 +1,3 @@
+<TestCase casename = "simple_search"> <!-- SIMPLE SEARCH PAGE -->
+    <URL>search.php</URL>
+  </TestCase>

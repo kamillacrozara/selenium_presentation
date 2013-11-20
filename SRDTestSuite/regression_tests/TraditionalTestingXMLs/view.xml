@@ -1,0 +1,6 @@
+<TestCase casename="view"> <!-- REGULAR VIEW PAGE - aka View All -->
+  	<URL>view.php</URL>
+  	<Parameter id="first"></Parameter> <!-- Start displaying after the first # of test cases) -->
+	<Parameter id="sort">asc</Parameter> <!-- Ascending(default)="asc" or Descending="desc" -->
+	<Parameter id="count">20</Parameter> <!-- Number of test cases displayed (default=20) -->
+ </TestCase>

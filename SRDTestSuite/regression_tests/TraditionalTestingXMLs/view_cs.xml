@@ -1,0 +1,9 @@
+<TestCase casename = "view_cs"> <!-- CODE SEARCH PARAMETERS -->
+    <URL>view.php</URL>
+    <Parameter id="function">buffer</Parameter>
+	<Parameter id="precision">1</Parameter> <!-- 1= exact, 2=contains -->
+	<Parameter id="Submit">SRD+Source+Code+Search</Parameter>
+	<Parameter id="first"></Parameter> <!-- Start displaying after the first # of test cases) -->
+	<Parameter id="sort">asc</Parameter> <!-- Ascending(default)="asc" or Descending="desc" -->
+	<Parameter id="count">20</Parameter> <!-- Number of test cases displayed (default=20) -->
+  </TestCase>

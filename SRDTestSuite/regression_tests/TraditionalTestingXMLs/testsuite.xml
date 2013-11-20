@@ -1,0 +1,3 @@
+  <TestCase casename = "testsuite">	<!-- TESTSUITE PAGE -->
+    <URL>testsuite.php</URL>
+  </TestCase>

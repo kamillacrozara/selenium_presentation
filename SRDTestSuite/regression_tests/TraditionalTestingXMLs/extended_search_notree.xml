@@ -1,0 +1,5 @@
+<TestCase casename = "extended_search_notree"> <!-- EXTENDED SEARCH PAGE with tree disabled -->
+    <URL>search.php</URL>
+    <Parameter id="extended"></Parameter>
+    <Parameter id="tree"></Parameter> 
+  </TestCase>

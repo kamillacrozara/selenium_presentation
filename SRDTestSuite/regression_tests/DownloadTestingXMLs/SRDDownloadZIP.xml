@@ -1,0 +1,7 @@
+<TestCase casename = "SRDDownloadZIP"> <!-- NG-CODE SEARCH PAGE -->
+    <URL>view.php</URL>
+    <Parameter id="count">20</Parameter>
+    <Parameter id="flaw">CWE-485: Insufficient Encapsulation</Parameter>
+    <Parameter id="status_Candidate">1</Parameter>
+    <Parameter id="status_Approved">1</Parameter>
+  </TestCase>

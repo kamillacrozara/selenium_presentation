@@ -1,0 +1,11 @@
+<TestCase casename = "view_scs"> <!-- SOURCE CODE SEARCH PARAMETERS -->
+    <URL>view.php</URL>
+    <Parameter id="function">buffer</Parameter>
+    <Parameter id="precision">2</Parameter>
+    <Parameter id="fileName"></Parameter>
+    <Parameter id="minFileSize">500</Parameter>
+    <Parameter id="maxFileSize">800</Parameter>
+    <Parameter id="minFiles">1</Parameter>
+    <Parameter id="maxFiles">2</Parameter>
+    <Parameter id="Submit">SRD Source Code Search</Parameter>
+  </TestCase>

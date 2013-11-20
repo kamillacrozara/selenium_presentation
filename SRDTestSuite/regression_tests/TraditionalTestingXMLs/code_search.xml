@@ -1,0 +1,4 @@
+<TestCase casename = "code_search"> <!-- CODE SEARCH PAGE -->
+    <URL>search.php</URL>
+    <Parameter id="code"></Parameter>
+  </TestCase>
