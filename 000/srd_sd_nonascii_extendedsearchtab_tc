@@ -68,10 +68,11 @@
 </tr>
 <tr>
 	<td>goBackAndWait</td>
-	
+	<td></td>
+	<td></td>
 </tr>
 <tr>
-	<td>sendKeys</td>
+	<td>type</td>
 	<td>//input[@name='description']</td>
 	<td>ñó? ä?çíì ??/??&nbsp;&nbsp;??/?? Huáy?; ?? Zh?ngwén ???????? Lech Wa??sa æøå</td>
 </tr>
@@ -97,7 +98,8 @@
 </tr>
 <tr>
 	<td>goBackAndWait</td>
-
+	<td></td>
+	<td></td>
 </tr>
 <tr>
 	<td>sendKeys</td>
@@ -126,7 +128,8 @@
 </tr>
 <tr>
 	<td>goBackAndWait</td>
-
+	<td></td>
+	<td></td>
 </tr>
 <tr>
 	<td>sendKeys</td>
@@ -152,15 +155,6 @@
 	<td>verifyText</td>
 	<td>link=Back to the previous page</td>
 	<td>Back to the previous page</td>
-</tr>
-<tr>
-	<td>goBackAndWait</td>
-
-</tr>
-<tr>
-	<td>open</td>
-	<td></td>
-	<td></td>
 </tr>
 </tbody></table>
 </body>

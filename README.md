@@ -1,5 +1,7 @@
-Selenium WebDriver
+Selenium 
 =====================
+
+Adding real browsers to your testes.
 
 ## Requirements ##
 

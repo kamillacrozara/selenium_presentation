@@ -1,3 +1,5 @@
+#!/usr/bin/python
+# -*- coding: utf-8 *-*
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
@@ -34,7 +36,7 @@ class SrdSdNonasciiExtendedsearchtabTc(unittest.TestCase):
         driver.find_element_by_xpath("//input[@name='description']").send_keys(u"ñó? ä?çíì ??/??  ??/?? Huáy?; ?? Zh?ngwén ???????? Lech Wa??sa æøå")
         driver.find_element_by_xpath("//input[@name='Submit']").click()
         self.assertEqual("SAMATE Reference Dataset :: View all test cases", driver.title)
-        try: self.assertEqual("View/Download Downloads:      \n \n There is no such test case in the database! Back to the previous page", driver.find_element_by_xpath("//div[@id='content']").text)
+        try: self.assertEqual("View/Download\nDownloads:     \n\nThere is no such test case in the database! Back to the previous page", driver.find_element_by_xpath("//div[@id='content']").text)
         except AssertionError as e: self.verificationErrors.append(str(e))
         try: self.assertEqual("Back to the previous page", driver.find_element_by_link_text("Back to the previous page").text)
         except AssertionError as e: self.verificationErrors.append(str(e))
@@ -42,7 +44,7 @@ class SrdSdNonasciiExtendedsearchtabTc(unittest.TestCase):
         driver.find_element_by_xpath("//input[@name='author']").send_keys(u"ñó? ä?çíì ??/??  ??/?? Huáy?; ?? Zh?ngwén ???????? Lech Wa??sa æøå")
         driver.find_element_by_xpath("//input[@name='Submit']").click()
         self.assertEqual("SAMATE Reference Dataset :: View all test cases", driver.title)
-        try: self.assertEqual("View/Download Downloads:      \n \n There is no such test case in the database! Back to the previous page", driver.find_element_by_xpath("//div[@id='content']").text)
+        try: self.assertEqual("View/Download\nDownloads:     \n\nThere is no such test case in the database! Back to the previous page", driver.find_element_by_xpath("//div[@id='content']").text)
         except AssertionError as e: self.verificationErrors.append(str(e))
         try: self.assertEqual("Back to the previous page", driver.find_element_by_link_text("Back to the previous page").text)
         except AssertionError as e: self.verificationErrors.append(str(e))
@@ -50,7 +52,7 @@ class SrdSdNonasciiExtendedsearchtabTc(unittest.TestCase):
         driver.find_element_by_xpath("//input[@name='contributor']").send_keys(u"ñó? ä?çíì ??/??  ??/?? Huáy?; ?? Zh?ngwén ???????? Lech Wa??sa æøå")
         driver.find_element_by_xpath("//input[@name='Submit']").click()
         self.assertEqual("SAMATE Reference Dataset :: View all test cases", driver.title)
-        try: self.assertEqual("View/Download Downloads:      \n \n There is no such test case in the database! Back to the previous page", driver.find_element_by_xpath("//div[@id='content']").text)
+        try: self.assertEqual("View/Download\nDownloads:     \n\nThere is no such test case in the database! Back to the previous page", driver.find_element_by_xpath("//div[@id='content']").text)
         except AssertionError as e: self.verificationErrors.append(str(e))
         try: self.assertEqual("Back to the previous page", driver.find_element_by_link_text("Back to the previous page").text)
         except AssertionError as e: self.verificationErrors.append(str(e))

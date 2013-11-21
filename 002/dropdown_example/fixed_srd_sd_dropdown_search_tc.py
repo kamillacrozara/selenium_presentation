@@ -5,13 +5,13 @@ class GeneratedSrdSdDropdownSearchTc(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Firefox()
         self.driver.implicitly_wait(30)
-        self.base_url = "http://samate.nist.gov/"
+        self.base_url = "http://samate.nist.gov/SRD"
         self.verificationErrors = []
         self.accept_next_alert = True
     
     def test_generated_srd_sd_dropdown_search_tc(self):
         driver = self.driver
-        driver.get(self.base_url + "SRD/search.php?simple")
+        driver.get(self.base_url + "/search.php?simple")
 
         driver.find_element_by_name("description").clear()
         driver.find_element_by_name("description").send_keys("buffer")
