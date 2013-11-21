@@ -159,8 +159,8 @@ class SrdSdSpecialcharaterExtendedsearchtabTc(unittest.TestCase):
         self.search_special_characters("contributor", "\\/")
         driver.back()
 
-    def search_special_characters(self, input_name, characters):
-        self.driver.find_element_by_xpath("//input[@name='%s']" %input_name).send_keys("%s" %characters)
+    def search_special_characters(self, input_id, characters):
+        self.driver.find_element_by_xpath("//input[@name='%s']" %input_id).send_keys("%s" %characters)
         self.driver.find_element_by_xpath("//input[@name='Submit']").click()
         try: self.assertEqual("SAMATE Reference Dataset :: View all test cases", self.driver.title)
         except AssertionError as e: self.verificationErrors.append(str(e))
