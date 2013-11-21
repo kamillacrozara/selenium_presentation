@@ -6,7 +6,7 @@ Adding real browsers to your testes.
 ## Requirements ##
 
 	- Firefox web browser (www.mozilla.org) v >= 24
-	- Selenium WebDriver (http://www.seleniumhq.org/download/) v >= 2.4.0
+	- Selenium IDE (http://www.seleniumhq.org/download/) v >= 2.4.0
 	- Python "selenium" package (https://pypi.python.org/pypi/selenium)
 	- Python "requests" package (https://pypi.python.org/pypi/requests)
 
