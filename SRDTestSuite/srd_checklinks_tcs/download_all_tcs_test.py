@@ -13,7 +13,6 @@ from selenium import webdriver
 import unittest
 import requests
 
-##@brief This class checks all the download links in SRD
 class DownloadAllTcs(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Firefox()
@@ -34,10 +33,11 @@ class DownloadAllTcs(unittest.TestCase):
         i = 20
         j = 1
         while (i < 88720):
+            #take the response of the request to download all the test cases on a given page
             resp = requests.head(self.base_url + "/view.php?count=20&action=zip-page&first=%s&sort=asc" %i)
             try: 
                 self.assertEqual(resp.status_code, 200)
-            except AssertionError as e: self.verificationErrors.append(str(e))
+            except AssertionError as e: self.verificationErrors.append("Could not download all the test cases on page %s" %i)
             i += 20
             j += 1
             
@@ -45,7 +45,7 @@ class DownloadAllTcs(unittest.TestCase):
     def test_download_all_tcs_on_srd(self):
         resp = requests.head(self.base_url + "/archive/current.zip")
         try: self.assertEqual(resp.status_code, 200)
-        except AssertionError as e: self.verificationErrors.append(str(e))
+        except AssertionError as e: self.verificationErrors.append("Link to download all the test cases in SRD does not work.")
     
     def tearDown(self):
         self.driver.quit()

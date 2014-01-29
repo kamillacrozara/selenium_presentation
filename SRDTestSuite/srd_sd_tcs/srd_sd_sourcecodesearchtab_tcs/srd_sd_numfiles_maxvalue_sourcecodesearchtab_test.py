@@ -21,6 +21,7 @@ class SrdSdNumfilesMaxValueSourceCodeSearchtabTc(unittest.TestCase):
         self.base_url = config["BASE_URL"]
         self.verificationErrors = []
         self.accept_next_alert = True
+        self.maxDiff = None
 
     """This method verifies the results of searchers for values from 0 to 11 in the max field"""
     def test_srd_sd_numfiles_extendedsearchtab_tc_max_value(self):

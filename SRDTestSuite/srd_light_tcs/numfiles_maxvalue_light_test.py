@@ -47,7 +47,7 @@ class  NumFilesMaxValueLightTest(unittest.TestCase):
                 while(j < numOfTestCases):
                     #for each element
                     driver.find_element_by_xpath("//div[@id='content']/form/table/tbody/tr[%s]/td[2]/a" %testCase).click()
-                    time.sleep(2)
+                    time.sleep(10)
                     #take the number of files
                     fileString = driver.find_element_by_xpath("//div[@id='content']/table/tbody/tr[14]/td[2]").text
                     
@@ -61,12 +61,12 @@ class  NumFilesMaxValueLightTest(unittest.TestCase):
                         try: 
                             self.assertTrue(int(numOfFiles) <= i)
                         except AssertionError as e: 
-                            self.verificationErrors.append(("Number of files is not <= then %s " %i))
+                            self.verificationErrors.append(("Number of files is not <= then %s as expected" %i))
                     else:
                         try: 
                             self.assertTrue(int(numOfFiles) <= i)
                         except AssertionError as e: 
-                            self.verificationErrors.append(("Number of files is not <= then %s " %i))
+                            self.verificationErrors.append(("Number of files is not <= then %s as expected" %i))
                     
                     j += 1
                     testCase += 1

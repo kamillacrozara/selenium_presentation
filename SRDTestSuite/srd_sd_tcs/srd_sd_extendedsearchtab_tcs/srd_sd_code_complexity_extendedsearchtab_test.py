@@ -20,6 +20,7 @@ class SrdSdCodeComplexityExtendedSearchTabTc(unittest.TestCase):
         self.base_url = config["BASE_URL"]
         self.verificationErrors = []
         self.accept_next_alert = True
+        self.maxDiff = None
 
     def test_srd_sd_code_complexity_extendedsearchtab_tc(self):
         ccplx = ["address alias level", "array address complexity", "array address complexity", 

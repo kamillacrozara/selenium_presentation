@@ -20,6 +20,7 @@ class SrdSdSpecialcharaterExtendedsearchtabTc(unittest.TestCase):
         self.base_url = config["BASE_URL"]
         self.verificationErrors = []
         self.accept_next_alert = True
+        self.maxDiff = None
 
     """This method verifies the results of the special characters searches"""
     def test_srd_sd_specialcharater_extendedsearchtab_tc(self):

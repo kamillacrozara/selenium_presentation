@@ -10,7 +10,7 @@ from selenium import webdriver
 import unittest
 import requests
 
-"""This class verifies the download of selected test cases in a given page"""
+
 class DownloadSelectedTcs(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Firefox()
@@ -20,6 +20,7 @@ class DownloadSelectedTcs(unittest.TestCase):
         self.base_url = config["BASE_URL"]
         self.verificationErrors = []
         self.accept_next_alert = True
+        self.maxDiff = None
 
     """This method verifies the download link of selected test cases. 
        For each page of test cases (using the default visualization with 
@@ -34,6 +35,7 @@ class DownloadSelectedTcs(unittest.TestCase):
             download_url = "/view.php?count=20zip"
             j = 2
             driver.get(self.base_url + "/view.php?count=20&first=%s&sort=asc" %i)
+            
             #try to download some selected tcs
             while (j < 20):
                 try:
@@ -41,15 +43,15 @@ class DownloadSelectedTcs(unittest.TestCase):
                 except Exception, e:
                     elementNumber = 0
 
+                #append the test case ID to the download URL 
                 if(elementNumber):
                     download_url = download_url + ("&zipTestCasesList%s=%s" %(specialCharacter, elementNumber))
                 j += 2
 
+            #verify if the download URL works properly
             resp = requests.head(self.base_url + download_url)
-            try: 
-                self.assertEqual(resp.status_code, 200)
-
-            except AssertionError as e: self.verificationErrors.append(str(e))
+            try: self.assertEqual(resp.status_code, 200)
+            except AssertionError as e: self.verificationErrors.append("Could not download selected test cases on page %s" %i)
             i += 20
     
     def tearDown(self):

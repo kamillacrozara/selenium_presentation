@@ -1,0 +1,152 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="robots" content="index, follow" />
+	<meta name="revisit-after" content="1 days" />
+		<title>SAMATE Reference Dataset  :: View all test cases </title>
+
+	<script type='text/javascript' src='js/design.js'></script>
+	<script type='text/javascript' src='js/utils.js' ></script>
+
+	<!--[if IE 6]>
+	<script type='text/javascript' src='js/ie6.js'></script>
+	<![endif]-->
+
+	<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+	</script>
+	<script type="text/javascript">
+	_uacct = "UA-437942-2";
+	urchinTracker();
+	</script>
+
+	<link href='css/style-samate.css' rel='stylesheet' type='text/css' />
+				  <!--link rel="alternate" type="application/rss+xml" title="RSS 2.0 for the Samate Reference Dataset" href="http://samate.nist.gov/SRD/rss.php" /-->
+
+</head>
+	<body>	<div id='msg-container'>
+							</div>	
+
+	<!-- Main menu -->
+
+	<div id='top'>
+		<map id="logoMap" name="logoMap">
+		<area href="http://samate.nist.gov" title="SAMATE Website" coords="2,2,85,100" alt="SAMATE Logo"/>
+		<area href="http://nist.gov" title="National Institute of Standards and Technology" coords="95,15,225,65" alt="NIST Logo"/>
+		</map>
+		<img usemap="#logoMap" class='left' src='images/dhs/samate_left.png' alt='The SAMATE Project' />
+		<a href='http://www.dhs.gov' title='Department of Homeland Security' ><img class='right' src='images/dhs/dhs_right_simple.png' alt='Department of Homeland Security' /></a>
+	</div>
+	<div id="menu">
+	<ul>
+		<li ><a href="index.php" title="Home">SRD Home</a></li>
+		<li class='active'><a href="view.php" title="View and download the test cases">View / Download</a></li>
+		<li ><a href="search.php" title="Search in the test cases repository">Search / Download</a></li>
+		<li ><a href="around.php" title="More Downloads: General information, etc.">More Downloads</a></li>
+				<li ><a href='testsuite.php?login=Guest' title='Test Suite Manager'>Test Suites</a></li>
+	</ul>
+	</div>
+
+	<!-- /Menu -->	
+
+	<div id="content">
+	<h1>View/Download<img style="margin-bottom:-5px; margin-left: 5px; display: none;" id="loading" src="images/loading.gif" width="25" height="25"></h1>
+	<div class='link'>
+		<span class='menu-top-right'>
+			Downloads:&nbsp;
+																<a href="#" onclick="validateSelection()" title="Download the selected Test Cases" rel="nofollow"> <img src='images/icons/download_one.png' alt='Download the selected Test Cases'/></a>
+				
+												<a href='view.php?count=20&function=buffer&minFileSize=500&maxFileSize=800&minFiles=1&maxFiles=2&precision=2&amp;action=zip-selected&amp;first=&amp;sort=asc' title="Download these 12 test cases" rel="nofollow">
+				<img src='images/icons/download_all.png' alt='Download these 12 test cases'/></a>&nbsp;
+									
+				<a href='view.php?count=20&function=buffer&minFileSize=500&maxFileSize=800&minFiles=1&maxFiles=2&precision=2&amp;action=zip-page&amp;first=&amp;sort=asc' title="Download all the test cases on the page" rel="nofollow">
+				<img src='images/icons/download_page.png' alt='Download all the test cases on the page'/></a>&nbsp;
+				
+				<a href='archive/current.zip' title="Download all the test cases in the SRD" rel="nofollow">
+				<img src='images/icons/download_srd.png' alt='Download all the test cases in the SRD'/></a>
+				
+				
+					</span>
+			</div>
+	<br />
+					
+			<br/>
+						<div class='line'>
+				<span class='fieldName' style='text-align: left; width:50%;'>
+											<strong>Results:</strong> 12 test cases.
+									</span>
+				<br />
+				<br />
+			</div>
+			
+		<form name="zelect" action="view.php?count=20&function=buffer&minFileSize=500&maxFileSize=800&minFiles=1&maxFiles=2&precision=2" method="post"> 			<table width='100%' border='0' cellspacing='0' cellpadding='0'>
+			<tr style='height: 40px; '>
+			    		<td class='bg' style='height: 20px; text-align: center; font-weight: bold;'>Select</td>
+    		    		<td class='bg' style='height: 20px; text-align: center; font-weight: bold;'>Test Case ID<a onclick="addLoading();" href="view.php?count=20&function=buffer&minFileSize=500&maxFileSize=800&minFiles=1&maxFiles=2&precision=2&amp;sort=desc&amp;first="><img src='images/arrow_down.gif' alt='(down)'/></a></td>
+    		    		<td class='bg' style='height: 20px; text-align: center; font-weight: bold;'>Submission Date</td>
+    		    		<td class='bg' style='height: 20px; text-align: center; font-weight: bold;'>Language</td>
+    		    		<td class='bg' style='height: 20px; text-align: center; font-weight: bold;'>Type of Artifact</td>
+    		    		<td class='bg' style='height: 20px; text-align: center; font-weight: bold;'><acronym title="C: Candidate - A: Approved - D: Deprecated">Status</acronym></td>
+    		    		<td class='bg' style='height: 20px; text-align: center; font-weight: bold;'>Description</td>
+    		    		<td class='bg' style='height: 20px; text-align: center; font-weight: bold;'>Weakness</td>
+    		    		<td class='bg' style='height: 20px; text-align: center; font-weight: bold;'>Bad / Good / Mixed</td>
+    		
+    		
+			</tr>
+                        <tr class='view' style='background-color:#f7f7f7; text-align: center;' ><td><label><input type="checkbox" name="zipTestCasesList[]" value="89" onclick="clicked(this)"  /></label> </td><td style="text-align: right; padding-right: 15px;" onclick="url = 'view_testcase.php?tID=89'; sendToURL(url)"><a href="view_testcase.php?tID=89">89</a></td><td>2006-01-04</td><td>C</td><td>Source Code</td><td><a href='http://samate.nist.gov/SRD_Manual_TC_Status.html#Candidate_Test_Cases' ><img src='images/Candidate.gif' style='border:0;' alt="Candidate" title="Candidate"/> </a></td><td style='text-align:justify;'>An ad-hoc string copy without bounds check overflows a stack ...</td><td style='text-align: left;'>None given</td><td style='background-color:#f9e4e4; text-align: center; font-weight: normal;'><a href='http://samate.nist.gov/SRD_Manual_TC_Status.html#Accepted_Test_Cases' ><img src='images/icons/bad.png' style="float: center;" alt='Bad test case' title='Bad test case'/></a></td></tr>
+			            <tr class='view' style='background-color:#f7f7f7; text-align: center;' ><td><label><input type="checkbox" name="zipTestCasesList[]" value="97" onclick="clicked(this)"  /></label> </td><td style="text-align: right; padding-right: 15px;" onclick="url = 'view_testcase.php?tID=97'; sendToURL(url)"><a href="view_testcase.php?tID=97">97</a></td><td>2006-01-04</td><td>C</td><td>Source Code</td><td><a href='http://samate.nist.gov/SRD_Manual_TC_Status.html#Candidate_Test_Cases' ><img src='images/Candidate.gif' style='border:0;' alt="Candidate" title="Candidate"/> </a></td><td style='text-align:justify;'>integer overflow results in a short malloc and an overflow.
+PLOVER:N</td><td style='text-align: left;'>CWE-118: Improper Access of Indexable Resource (Range Error) </td><td style='background-color:#f9e4e4; text-align: center; font-weight: normal;'><a href='http://samate.nist.gov/SRD_Manual_TC_Status.html#Accepted_Test_Cases' ><img src='images/icons/bad.png' style="float: center;" alt='Bad test case' title='Bad test case'/></a></td></tr>
+			            <tr class='view' style='background-color:#f7f7f7; text-align: center;' ><td><label><input type="checkbox" name="zipTestCasesList[]" value="101" onclick="clicked(this)"  /></label> </td><td style="text-align: right; padding-right: 15px;" onclick="url = 'view_testcase.php?tID=101'; sendToURL(url)"><a href="view_testcase.php?tID=101">101</a></td><td>2006-01-04</td><td>C</td><td>Source Code</td><td><a href='http://samate.nist.gov/SRD_Manual_TC_Status.html#Candidate_Test_Cases' ><img src='images/Candidate.gif' style='border:0;' alt="Candidate" title="Candidate"/> </a></td><td style='text-align:justify;'>A strcpy of a buffer with a missing NUL character causes a stack ...</td><td style='text-align: left;'>None given</td><td style='background-color:#f9e4e4; text-align: center; font-weight: normal;'><a href='http://samate.nist.gov/SRD_Manual_TC_Status.html#Accepted_Test_Cases' ><img src='images/icons/bad.png' style="float: center;" alt='Bad test case' title='Bad test case'/></a></td></tr>
+			            <tr class='view' style='background-color:#f7f7f7; text-align: center;' ><td><label><input type="checkbox" name="zipTestCasesList[]" value="104" onclick="clicked(this)"  /></label> </td><td style="text-align: right; padding-right: 15px;" onclick="url = 'view_testcase.php?tID=104'; sendToURL(url)"><a href="view_testcase.php?tID=104">104</a></td><td>2006-01-04</td><td>C</td><td>Source Code</td><td><a href='http://samate.nist.gov/SRD_Manual_TC_Status.html#Candidate_Test_Cases' ><img src='images/Candidate.gif' style='border:0;' alt="Candidate" title="Candidate"/> </a></td><td style='text-align:justify;'>An strcpy overflows a stack buffer. A check was made to avoid an ...</td><td style='text-align: left;'>None given</td><td style='background-color:#f9e4e4; text-align: center; font-weight: normal;'><a href='http://samate.nist.gov/SRD_Manual_TC_Status.html#Accepted_Test_Cases' ><img src='images/icons/bad.png' style="float: center;" alt='Bad test case' title='Bad test case'/></a></td></tr>
+			            <tr class='view' style='background-color:#f7f7f7; text-align: center;' ><td><label><input type="checkbox" name="zipTestCasesList[]" value="105" onclick="clicked(this)"  /></label> </td><td style="text-align: right; padding-right: 15px;" onclick="url = 'view_testcase.php?tID=105'; sendToURL(url)"><a href="view_testcase.php?tID=105">105</a></td><td>2006-01-04</td><td>C</td><td>Source Code</td><td><a href='http://samate.nist.gov/SRD_Manual_TC_Status.html#Candidate_Test_Cases' ><img src='images/Candidate.gif' style='border:0;' alt="Candidate" title="Candidate"/> </a></td><td style='text-align:justify;'>snprintf with incorrect bounds allows a stack buffer to be ...</td><td style='text-align: left;'>None given</td><td style='background-color:#f9e4e4; text-align: center; font-weight: normal;'><a href='http://samate.nist.gov/SRD_Manual_TC_Status.html#Accepted_Test_Cases' ><img src='images/icons/bad.png' style="float: center;" alt='Bad test case' title='Bad test case'/></a></td></tr>
+			            <tr class='view' style='background-color:#f7f7f7; text-align: center;' ><td><label><input type="checkbox" name="zipTestCasesList[]" value="106" onclick="clicked(this)"  /></label> </td><td style="text-align: right; padding-right: 15px;" onclick="url = 'view_testcase.php?tID=106'; sendToURL(url)"><a href="view_testcase.php?tID=106">106</a></td><td>2006-01-04</td><td>C</td><td>Source Code</td><td><a href='http://samate.nist.gov/SRD_Manual_TC_Status.html#Candidate_Test_Cases' ><img src='images/Candidate.gif' style='border:0;' alt="Candidate" title="Candidate"/> </a></td><td style='text-align:justify;'>snprintf with incorrect bounds allows a stack buffer to be ...</td><td style='text-align: left;'>None given</td><td style='background-color:#f9e4e4; text-align: center; font-weight: normal;'><a href='http://samate.nist.gov/SRD_Manual_TC_Status.html#Accepted_Test_Cases' ><img src='images/icons/bad.png' style="float: center;" alt='Bad test case' title='Bad test case'/></a></td></tr>
+			            <tr class='view' style='background-color:#f7f7f7; text-align: center;' ><td><label><input type="checkbox" name="zipTestCasesList[]" value="107" onclick="clicked(this)"  /></label> </td><td style="text-align: right; padding-right: 15px;" onclick="url = 'view_testcase.php?tID=107'; sendToURL(url)"><a href="view_testcase.php?tID=107">107</a></td><td>2006-01-04</td><td>C</td><td>Source Code</td><td><a href='http://samate.nist.gov/SRD_Manual_TC_Status.html#Candidate_Test_Cases' ><img src='images/Candidate.gif' style='border:0;' alt="Candidate" title="Candidate"/> </a></td><td style='text-align:justify;'>snprintf with incorrect bounds allows a stack buffer to be ...</td><td style='text-align: left;'>None given</td><td style='background-color:#f9e4e4; text-align: center; font-weight: normal;'><a href='http://samate.nist.gov/SRD_Manual_TC_Status.html#Accepted_Test_Cases' ><img src='images/icons/bad.png' style="float: center;" alt='Bad test case' title='Bad test case'/></a></td></tr>
+			            <tr class='view' style='background-color:#f7f7f7; text-align: center;' ><td><label><input type="checkbox" name="zipTestCasesList[]" value="1782" onclick="clicked(this)"  /></label> </td><td style="text-align: right; padding-right: 15px;" onclick="url = 'view_testcase.php?tID=1782'; sendToURL(url)"><a href="view_testcase.php?tID=1782">1782</a></td><td>2007-01-08</td><td>C</td><td>Source Code</td><td><a href='http://samate.nist.gov/SRD_Manual_TC_Status.html#Accepted_Test_Cases' ><img src='images/Approved.gif' style='border:0;' alt="Approved" title="Approved"/> </a></td><td style='text-align:justify;'>In C and C++, one may often accidentally refer to the wrong ...</td><td style='text-align: left;'>CWE-468: Incorrect Pointer Scaling </td><td style='background-color:#f9e4e4; text-align: center; font-weight: normal;'><a href='http://samate.nist.gov/SRD_Manual_TC_Status.html#Accepted_Test_Cases' ><img src='images/icons/bad.png' style="float: center;" alt='Bad test case' title='Bad test case'/></a></td></tr>
+			            <tr class='view' style='background-color:#f7f7f7; text-align: center;' ><td><label><input type="checkbox" name="zipTestCasesList[]" value="1903" onclick="clicked(this)"  /></label> </td><td style="text-align: right; padding-right: 15px;" onclick="url = 'view_testcase.php?tID=1903'; sendToURL(url)"><a href="view_testcase.php?tID=1903">1903</a></td><td>2007-03-01</td><td>C</td><td>Source Code</td><td><a href='http://samate.nist.gov/SRD_Manual_TC_Status.html#Candidate_Test_Cases' ><img src='images/Candidate.gif' style='border:0;' alt="Candidate" title="Candidate"/> </a></td><td style='text-align:justify;'>The test case shows a Stack Overflow.</td><td style='text-align: left;'>CWE-121: Stack Based Buffer Overflow </td><td style='background-color:#f9e4e4; text-align: center; font-weight: normal;'><a href='http://samate.nist.gov/SRD_Manual_TC_Status.html#Accepted_Test_Cases' ><img src='images/icons/bad.png' style="float: center;" alt='Bad test case' title='Bad test case'/></a></td></tr>
+			            <tr class='view' style='background-color:#f7f7f7; text-align: center;' ><td><label><input type="checkbox" name="zipTestCasesList[]" value="1904" onclick="clicked(this)"  /></label> </td><td style="text-align: right; padding-right: 15px;" onclick="url = 'view_testcase.php?tID=1904'; sendToURL(url)"><a href="view_testcase.php?tID=1904">1904</a></td><td>2007-03-01</td><td>C</td><td>Source Code</td><td><a href='http://samate.nist.gov/SRD_Manual_TC_Status.html#Candidate_Test_Cases' ><img src='images/Candidate.gif' style='border:0;' alt="Candidate" title="Candidate"/> </a></td><td style='text-align:justify;'>The test case shows a Stack Overflow.</td><td style='text-align: left;'>CWE-121: Stack Based Buffer Overflow </td><td style='background-color:#e4e9f9; text-align: center; font-weight: normal;'><a href='http://samate.nist.gov/SRD_Manual_TC_Status.html#Accepted_Test_Cases' ><img src='images/icons/good.png' style="float: center;" alt='Good test case' title='Good test case' /></a></td></tr>
+			            <tr class='view' style='background-color:#f7f7f7; text-align: center;' ><td><label><input type="checkbox" name="zipTestCasesList[]" value="1907" onclick="clicked(this)"  /></label> </td><td style="text-align: right; padding-right: 15px;" onclick="url = 'view_testcase.php?tID=1907'; sendToURL(url)"><a href="view_testcase.php?tID=1907">1907</a></td><td>2007-03-01</td><td>C</td><td>Source Code</td><td><a href='http://samate.nist.gov/SRD_Manual_TC_Status.html#Accepted_Test_Cases' ><img src='images/Approved.gif' style='border:0;' alt="Approved" title="Approved"/> </a></td><td style='text-align:justify;'>The test case shows a Stack Overflow.</td><td style='text-align: left;'>CWE-121: Stack Based Buffer Overflow </td><td style='background-color:#f9e4e4; text-align: center; font-weight: normal;'><a href='http://samate.nist.gov/SRD_Manual_TC_Status.html#Accepted_Test_Cases' ><img src='images/icons/bad.png' style="float: center;" alt='Bad test case' title='Bad test case'/></a></td></tr>
+			            <tr class='view' style='background-color:#f7f7f7; text-align: center;' ><td><label><input type="checkbox" name="zipTestCasesList[]" value="1908" onclick="clicked(this)"  /></label> </td><td style="text-align: right; padding-right: 15px;" onclick="url = 'view_testcase.php?tID=1908'; sendToURL(url)"><a href="view_testcase.php?tID=1908">1908</a></td><td>2007-03-01</td><td>C</td><td>Source Code</td><td><a href='http://samate.nist.gov/SRD_Manual_TC_Status.html#Accepted_Test_Cases' ><img src='images/Approved.gif' style='border:0;' alt="Approved" title="Approved"/> </a></td><td style='text-align:justify;'>The test case shows a Stack Overflow.</td><td style='text-align: left;'>CWE-121: Stack Based Buffer Overflow </td><td style='background-color:#e4e9f9; text-align: center; font-weight: normal;'><a href='http://samate.nist.gov/SRD_Manual_TC_Status.html#Accepted_Test_Cases' ><img src='images/icons/good.png' style="float: center;" alt='Good test case' title='Good test case' /></a></td></tr>
+						</table>
+					</div> 			</form>
+		<!--<br />-->			<!-- </div> --> 
+<div id="footer">
+	<div class='line'>
+	  <p>
+        <script type="text/javascript">
+	function obfuscate_email(mailto) {
+		email_start = "" + "s" + "amate";
+		if (mailto==1)
+			email_start = "mailto:" + email_start;
+		email_end = "." + "gov";
+		email_middle = "ni" + "st";
+		return email_start + String.fromCharCode(64) + email_middle + email_end;
+	}
+	
+	    </script>
+	    <span class='fieldName' style="margin-top:0;">
+	<em>Contact:&nbsp; <a href="javascript:void(0)" class='external' title="Contact the Samate team" onclick="this.href=obfuscate_email(1);">
+	<script type="text/javascript">document.write(obfuscate_email(0));</script>
+	<!--<noscript> 	SAMATE Team
+	</noscript> -->
+	</a></em><br />
+	This webpage is <a href="http://validator.w3.org/check/referer" title="XHTML Strict (non AJAX pages)" >XHTML Strict</a>
+	 and <a href="http://www.w3.org/WAI/WCAG1AA-Conformance" title="W3C Web accessibility initiative - Accessible AA" >AA</a> compliant. <br />
+	Created on January 2006, last update: June 1, 2013, Version: 4.3<br />
+	    <!-- a href='rss.php' title='Samate Reference Dataset RSS Feed'><img src='images/icons/rss2.gif' alt='RSS Feed' /></a-->
+    </span>
+	    <span class='data'>
+        <a href="http://www.itl.nist.gov/" title="ITL">Information Technology Laboratory</a>, <a href="http://www.itl.nist.gov/div897/" title="Division 897">Software and Systems Division</a>
+        <br/>
+        <a href="http://www.nist.gov/public_affairs/privacy.htm" title="PRIVACY/SECURITY ISSUES">PRIVACY/SECURITY ISSUES</a>
+        &bull; <a href="http://www.nist.gov/director/foia/" title="FOIA">FOIA</a>
+        &bull; <a href="http://www.nist.gov/public_affairs/disclaim.htm" title="Disclaimer">Disclaimer</a>
+        &bull; <a href="http://www.usa.gov" title="USA.gov">USA.gov</a>
+        <br />
+        <a href="http://www.nist.gov" title="National Institute of Standards and Technology">NIST</a> is an agency of the <a href="http://www.doc.gov" title="Department of Commerce">U.S. Commerce Department</a>
+      </span></p>
+  </div>
+</div>
+</body>
+</html>

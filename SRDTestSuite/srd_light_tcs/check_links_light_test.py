@@ -19,6 +19,7 @@ class CheckLinksLightTest(unittest.TestCase):
         self.base_url = config["BASE_URL"]
         self.verificationErrors = []
         self.accept_next_alert = True
+        self.maxDiff = None
 
 
     """This method verifies the download links of all test cases in a page 
@@ -33,7 +34,7 @@ class CheckLinksLightTest(unittest.TestCase):
             resp = requests.head(url)
             try: 
                 self.assertEqual(resp.status_code, 200)
-            except AssertionError as e: self.verificationErrors.append(str(e))
+            except AssertionError as e: self.verificationErrors.append("The link to download all test cases does not work on page %s" %i)
             if (i == 88720): 
             	break
             i += 44350
@@ -41,7 +42,7 @@ class CheckLinksLightTest(unittest.TestCase):
 
     """This method goes to each Test Case on pages 20, 
        44370 and 88720 in the SRD and verifies the link 
-       "Download this Test Case #"."""
+       "Download this Test Case."""
     def test_download_each_tc(self):
         i = 0
         driver = self.driver
@@ -49,7 +50,7 @@ class CheckLinksLightTest(unittest.TestCase):
         while True:
             j = 2
             driver.get(self.base_url + "/view.php?count=20&first=%s&sort=asc" %i)
-            #try to go in each tc and download it
+            #try to go in each tc page and download it
             while (j < 22):
                 try:
                     tcID = driver.find_element_by_xpath("//div[@id='content']/form/table/tbody/tr[%s]/td[2]/a" %j).text
@@ -60,7 +61,7 @@ class CheckLinksLightTest(unittest.TestCase):
                     resp = requests.head(self.base_url + "/view.php?reference=%s&action=zip-selected" %tcID)
                     try: 
                         self.assertEqual(resp.status_code, 200)
-                    except AssertionError as e: self.verificationErrors.append(str(e))
+                    except AssertionError as e: self.verificationErrors.append("Could not download the test case %s on page %i" %(tcID, i))
                 j += 1 
             if (i == 88720): 
                 break
@@ -91,7 +92,7 @@ class CheckLinksLightTest(unittest.TestCase):
             resp = requests.head(self.base_url + download_url)
             try: 
                 self.assertEqual(resp.status_code, 200)
-            except AssertionError as e: self.verificationErrors.append(str(e))
+            except AssertionError as e: self.verificationErrors.append("Could not download the selected test cases on page %s" %i)
             if (i == 88720): 
                 break
             i+=44360

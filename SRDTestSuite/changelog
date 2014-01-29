@@ -29,3 +29,9 @@ Version 1.1
 
 	
 	- All the logs are written in only one file with the format: selenium_srd_tests_m-d-y-H:M.log
+
+
+
+Version 1.2
+
+	- Added tests to the i-SRD database

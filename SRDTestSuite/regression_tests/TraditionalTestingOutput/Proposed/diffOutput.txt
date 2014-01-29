@@ -1,98 +1,98 @@
 
 ****************************************************************
 File: around.html
-Query: http://samate.nist.gov/ngSRD/around.php?
+Query: http://samate.nist.gov/SRD/around.php?
 Exact Match
 
 ****************************************************************
 
 ****************************************************************
 File: code_search.html
-Query: http://samate.nist.gov/ngSRD/search.php?code=
+Query: http://samate.nist.gov/SRD/search.php?code=
 Exact Match
 
 ****************************************************************
 
 ****************************************************************
 File: extended_search.html
-Query: http://samate.nist.gov/ngSRD/search.php?extended=
+Query: http://samate.nist.gov/SRD/search.php?extended=
 Exact Match
 
 ****************************************************************
 
 ****************************************************************
 File: extended_search_notree.html
-Query: http://samate.nist.gov/ngSRD/search.php?extended=&tree=
+Query: http://samate.nist.gov/SRD/search.php?extended=&tree=
 Exact Match
 
 ****************************************************************
 
 ****************************************************************
 File: index.html
-Query: http://samate.nist.gov/ngSRD/index.php?
+Query: http://samate.nist.gov/SRD/index.php?
 Exact Match
 
 ****************************************************************
 
 ****************************************************************
 File: search_e.html
-Query: http://samate.nist.gov/ngSRD/search.php?code=1
+Query: http://samate.nist.gov/SRD/search.php?code=1
 Exact Match
 
 ****************************************************************
 
 ****************************************************************
 File: simple_search.html
-Query: http://samate.nist.gov/ngSRD/search.php?
+Query: http://samate.nist.gov/SRD/search.php?
 Exact Match
 
 ****************************************************************
 
 ****************************************************************
 File: testcase_4.html
-Query: http://samate.nist.gov/ngSRD/view_testcase.php?tID=4
+Query: http://samate.nist.gov/SRD/view_testcase.php?tID=4
 Exact Match
 
 ****************************************************************
 
 ****************************************************************
 File: testsuite.html
-Query: http://samate.nist.gov/ngSRD/testsuite.php?
+Query: http://samate.nist.gov/SRD/testsuite.php?
 Exact Match
 
 ****************************************************************
 
 ****************************************************************
 File: view.html
-Query: http://samate.nist.gov/ngSRD/view.php?first=&sort=asc&count=20
+Query: http://samate.nist.gov/SRD/view.php?first=&sort=asc&count=20
 Exact Match
 
 ****************************************************************
 
 ****************************************************************
 File: view_cs.html
-Query: http://samate.nist.gov/ngSRD/view.php?function=buffer&precision=1&Submit=SRD%2BSource%2BCode%2BSearch&first=&sort=asc&count=20
+Query: http://samate.nist.gov/SRD/view.php?function=buffer&precision=1&Submit=SRD%2BSource%2BCode%2BSearch&first=&sort=asc&count=20
 Exact Match
 
 ****************************************************************
 
 ****************************************************************
 File: view_es.html
-Query: http://samate.nist.gov/ngSRD/view.php?reference=&description=&author=&contributor=&flawed%5B%5D=Bad&languages%5B%5D=Any...&typesofartifacts%5B%5D=Source%2BCode&status_Candidate=1&status_Approved=1&status_Deprecated=&fromWhere=fromSearch&typesofflaws_1=Any...&codecplx_1=.&typeDate=All&date=&flaw_ro=Any...&codecplx_ro=Any...&submit=Search%2BTest%2BCases&first=&sort=asc&count=20
+Query: http://samate.nist.gov/SRD/view.php?reference=&description=&author=&contributor=&flawed%5B%5D=Bad&languages%5B%5D=Any...&typesofartifacts%5B%5D=Source%2BCode&status_Candidate=1&status_Approved=1&status_Deprecated=&fromWhere=fromSearch&typesofflaws_1=Any...&codecplx_1=.&typeDate=All&date=&flaw_ro=Any...&codecplx_ro=Any...&submit=Search%2BTest%2BCases&first=&sort=asc&count=20
 Exact Match
 
 ****************************************************************
 
 ****************************************************************
 File: view_scs.html
-Query: http://samate.nist.gov/ngSRD/view.php?function=buffer&precision=2&fileName=&minFileSize=500&maxFileSize=800&minFiles=1&maxFiles=2&Submit=SRD+Source+Code+Search
+Query: http://samate.nist.gov/SRD/view.php?function=buffer&precision=2&fileName=&minFileSize=500&maxFileSize=800&minFiles=1&maxFiles=2&Submit=SRD+Source+Code+Search
 Exact Match
 
 ****************************************************************
 
 ****************************************************************
 File: view_ss.html
-Query: http://samate.nist.gov/ngSRD/view.php?reference=&description=&author=&contributor=&flawed%5B%5D=Bad&languages%5B%5D=Any...&typesofartifacts%5B%5D=Source%2BCode&status_Candidate=1&status_Approved=1&status_Deprecated=&fromWhere=fromSearch&flaw=Any...&codeCplx=.&Submit=Search%2BTest%2BCases&first=&sort=asc&count=20
+Query: http://samate.nist.gov/SRD/view.php?reference=&description=&author=&contributor=&flawed%5B%5D=Bad&languages%5B%5D=Any...&typesofartifacts%5B%5D=Source%2BCode&status_Candidate=1&status_Approved=1&status_Deprecated=&fromWhere=fromSearch&flaw=Any...&codeCplx=.&Submit=Search%2BTest%2BCases&first=&sort=asc&count=20
 Exact Match
 
 ****************************************************************

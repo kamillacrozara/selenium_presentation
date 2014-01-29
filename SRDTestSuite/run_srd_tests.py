@@ -27,7 +27,7 @@ def start_threads(tests):
 		thread.start()
 		logNumber +=1
 
-def execute_rg_tests(args):
+def execute_regression_tests(args):
 	rg_args = ""
 	i = 2
 	while i < len(args):
@@ -47,7 +47,7 @@ def verify_log_folder():
 			print "Log folder doesn't exist and can't be created. Please verify the user permissions to the execution folder."
 			raise
 
-def log_execution(test_type = 'default'):
+def print_log_execution(test_type = 'default'):
 	config = {}
 	execfile("srd_test_suite.conf", config)
 	
@@ -56,6 +56,7 @@ def log_execution(test_type = 'default'):
 					'ck': "Check Links",
 					'sd': "Search/Download tab",
 					'lt': "Light",
+					'db' : "Database",
 					'default': "SRD Test Suite",
 					'rg': "Regression"
 					}
@@ -67,39 +68,44 @@ def log_execution(test_type = 'default'):
 	print "****************************************************************"
 
 if __name__ == '__main__':
+	verify_log_folder()
+
 	if len(sys.argv) == 1:
-		verify_log_folder()
 		tests = grab_files(os.getcwd())
 		os.system('cd regression_tests && php RunAll.php -g')
-		log_execution()
+		print_log_execution()
 		start_threads(tests)
-	elif ((len(sys.argv) == 2) and (sys.argv[1] == "ui")):
-		verify_log_folder()
-		log_execution(sys.argv[1])
-		tests = grab_files(os.getcwd() + "/srd_ui_tcs")
-		start_threads(tests)
-	elif ((len(sys.argv) == 2) and (sys.argv[1] == "sd")):
-		verify_log_folder()
-		log_execution(sys.argv[1])
-		tests = grab_files(os.getcwd() + "/srd_sd_tcs")
-		start_threads(tests)
-	elif ((len(sys.argv) == 2) and (sys.argv[1] == "lt")):
-		verify_log_folder()
-		log_execution(sys.argv[1])
-		tests = grab_files(os.getcwd() + "/srd_light_tcs")
-		start_threads(tests)
-	elif ((len(sys.argv) == 2) and (sys.argv[1] == "ck")):
-		verify_log_folder()
-		log_execution(sys.argv[1])
-		tests = grab_files(os.getcwd() + "/srd_checklinks_tcs")
-		start_threads(tests)
+	
+	elif (len(sys.argv) == 2):
+		if (sys.argv[1] == "ui"):
+			print_log_execution(sys.argv[1])
+			tests = grab_files(os.getcwd() + "/srd_ui_tcs")
+			start_threads(tests)
+		if (sys.argv[1] == "sd"):
+			print_log_execution(sys.argv[1])
+			tests = grab_files(os.getcwd() + "/srd_sd_tcs")
+			start_threads(tests)
+		if (sys.argv[1] == "lt"):
+			print_log_execution(sys.argv[1])
+			tests = grab_files(os.getcwd() + "/srd_light_tcs")
+			start_threads(tests)
+		if (sys.argv[1] == "db"):
+			print_log_execution(sys.argv[1])
+			tests = grab_files(os.getcwd() + "/srd_db_tcs")
+			start_threads(tests)
+		if (sys.argv[1] == "ck"):
+			print_log_execution(sys.argv[1])
+			tests = grab_files(os.getcwd() + "/srd_checklinks_tcs")
+			start_threads(tests)
 	elif sys.argv[1] == "rg":
-		execute_rg_tests(sys.argv)
+		execute_regression_tests(sys.argv)
+	
 	else:
 		print "\nOops... wrong number of arguments and/or invalid option.\n"
 		print "Please, choose a valid option:\n"
 		print "[ui] for User Interface tests."
 		print "[sd] for Search/Download tab tests."
 		print "[lt] for light tests."
+		print "[db] for database tests."
 		print "[ck] for check the SRD download links."
 		print "[rg] [aditional arguments] for regression tests.\n"

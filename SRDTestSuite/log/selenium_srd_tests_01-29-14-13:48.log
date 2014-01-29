@@ -1,0 +1,31 @@
+E
+======================================================================
+ERROR: test_insert_test_suite (__main__.InsertTestSuites)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/crozarakamilla/Documents/SRDTestSuite/srd_db_tcs/insert_test_suites_test.py", line 68, in test_insert_test_suite
+    self.assertEqual(insertedTestCaseID, self.driver.find_element_by_xpath("//div[@id='content']/form/table/tbody/tr[2]/td[2]/a").text)
+  File "/usr/local/lib/python2.7/dist-packages/nltk-2.0.4-py2.7.egg/unittest/case.py", line 511, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/local/lib/python2.7/dist-packages/nltk-2.0.4-py2.7.egg/unittest/case.py", line 501, in _baseAssertEqual
+    if not first == second:
+  File "/usr/local/lib/python2.7/dist-packages/selenium/webdriver/remote/webelement.py", line 350, in __eq__
+    if self._id == element.id:
+AttributeError: 'unicode' object has no attribute 'id'
+
+----------------------------------------------------------------------
+Ran 1 test in 25.547s
+
+FAILED (errors=1)
+TITLE Test suite (2014/01/29 13:49:06)
+(//a[contains(text(),'Test suite (2014/01/29 13:49:06)')])[2]
+.
+----------------------------------------------------------------------
+Ran 1 test in 108.158s
+
+OK
+.
+----------------------------------------------------------------------
+Ran 1 test in 110.468s
+
+OK

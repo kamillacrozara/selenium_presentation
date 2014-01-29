@@ -62,11 +62,11 @@ class NumFilesMinValueLightTest(unittest.TestCase):
                     if(numOfFiles == 1):
                         try: self.assertTrue(int(numOfFiles) >= i)
                         except AssertionError as e: 
-                            self.verificationErrors.append(("Number of files is not >= then %s " %i))
+                            self.verificationErrors.append(("Number of files is not >= then %s as expected" %i))
                     else:
                         try: self.assertTrue(int(numOfFiles) >= i)
                         except AssertionError as e: 
-                            self.verificationErrors.append(("Number of files is not >= then %s " %i))
+                            self.verificationErrors.append(("Number of files is not >= then %s as expected" %i))
                     j += 1
                     testCase += 1
                     driver.back()

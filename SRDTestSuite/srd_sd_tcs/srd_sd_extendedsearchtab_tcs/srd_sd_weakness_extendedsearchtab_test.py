@@ -19,6 +19,7 @@ class SrdSdWeaknessExtendedSearchTabTc(unittest.TestCase):
         self.base_url = config["BASE_URL"]
         self.verificationErrors = []
         self.accept_next_alert = True
+        self.maxDiff = None
 
     """This method verifies the results of searches by weakness"""
     def test_srd_sd_weakness_extendedsearchtab_tc(self):
@@ -63,7 +64,7 @@ class SrdSdWeaknessExtendedSearchTabTc(unittest.TestCase):
         i = 2
         while(i < numOfTestCases):
             try: self.assertEqual(weaknessType, driver.find_element_by_xpath("//div[@id='content']/form/table/tbody/tr[%s]/td[8]" %i).text)
-            except AssertionError as e: self.verificationErrors.append(str(e))
+            except AssertionError as e: self.verificationErrors.append("The weakness type is not the same as specified on the search")
             i +=1
 
     def tearDown(self):

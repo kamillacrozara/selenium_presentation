@@ -5,7 +5,7 @@
 File: common_sd_methods.py
 Author: Kamilla H. Crozara
 Description:    
-    Common test cases related to the Search/Download tab tests.
+    Common methods related to the Search/Download tab tests.
 """
 def assert_title(self, driver, verificationErrors):
     try: self.assertEqual("SAMATE Reference Dataset :: View all test cases", driver.title)

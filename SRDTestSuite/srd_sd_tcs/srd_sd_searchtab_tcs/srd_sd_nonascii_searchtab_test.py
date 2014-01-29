@@ -21,6 +21,7 @@ class SrdSdNonasciiSearchTabTc(unittest.TestCase):
         self.base_url = config["BASE_URL"]
         self.verificationErrors = []
         self.accept_next_alert = True
+        self.maxDiff = None
         
     def test_srd_sd_nonascii_tc(self):
         driver = self.driver

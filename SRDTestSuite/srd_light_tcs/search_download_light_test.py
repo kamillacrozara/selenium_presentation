@@ -9,6 +9,7 @@ Description:
 """
 from selenium import webdriver
 import unittest, time, re
+from srd_sd_tcs.common_sd_methods import common_sd_methods
 
 """This class executes tests inserting different types 
    charactes in the fields on the Search/Download tab"""
@@ -34,42 +35,40 @@ class SearchDownloadLightTest(unittest.TestCase):
         driver.find_element_by_xpath("//input[@name='reference']").send_keys("\"This sentence is wrapped in double quotes.\"")
         driver.find_element_by_xpath("//input[@name='Submit']").click()
         time.sleep(2)
-        self.assert_title(driver)
+        common_sd_methods.assert_title(self, driver, self.verificationErrors)
         driver.back()
 
         driver.find_element_by_xpath("//input[@name='contributor']").send_keys(u"ñó? ä?çíì ??/??  ??/?? Huáy?; ?? Zh?ngwén ???????? Lech Wa??sa æøå")
         driver.find_element_by_xpath("//input[@name='Submit']").click()
         time.sleep(2)
-        self.assert_title(driver)
+        common_sd_methods.assert_title(self, driver, self.verificationErrors)
         driver.back()
 
         driver.find_element_by_xpath("//a[contains(text(),'Extended Search')]").click()
         driver.find_element_by_xpath("//input[@name='reference']").send_keys("\"This sentence is wrapped in double quotes.\"")
         driver.find_element_by_xpath("//input[@name='Submit']").click()
         time.sleep(2)
-        self.assert_title(driver)
+        common_sd_methods.assert_title(self, driver, self.verificationErrors)
         driver.back()
 
         driver.find_element_by_xpath("//input[@name='contributor']").send_keys(u"ñó? ä?çíì ??/??  ??/?? Huáy?; ?? Zh?ngwén ???????? Lech Wa??sa æøå")
         driver.find_element_by_xpath("//input[@name='Submit']").click()
         time.sleep(2)
-        self.assert_title(driver)
+        common_sd_methods.assert_title(self, driver, self.verificationErrors)
         driver.back()
 
         driver.find_element_by_xpath("//a[contains(text(),'Source Code Search')]").click()
         driver.find_element_by_xpath("//input[@id='function']").send_keys("\"This sentence is wrapped in double quotes.\"")
         driver.find_element_by_xpath("//input[@name='Submit']").click()
         time.sleep(2)
-        self.assert_title(driver)
+        common_sd_methods.assert_title(self, driver, self.verificationErrors)
         driver.back()
 
         driver.find_element_by_xpath("//input[@id='fileName']").send_keys(u"ñó? ä?çíì ??/??  ??/?? Huáy?; ?? Zh?ngwén ???????? Lech Wa??sa æøå")
         driver.find_element_by_xpath("//input[@name='Submit']").click()
         time.sleep(2)
-        self.assert_title(driver)
+        common_sd_methods.assert_title(self, driver, self.verificationErrors)
 
-    def assert_title(self, driver):
-        self.assertEqual("SAMATE Reference Dataset :: View all test cases", driver.title)
 
     def tearDown(self):
         self.driver.quit()

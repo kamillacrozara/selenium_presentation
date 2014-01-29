@@ -19,6 +19,7 @@ class SrdSdQuerydateExtendedSearchTabTc(unittest.TestCase):
         self.base_url = config["BASE_URL"]
         self.verificationErrors = []
         self.accept_next_alert = True
+        self.maxDiff = None
 
     """This method verifies the results of the searches 
        by date on the "Extended Search" tab"""
@@ -26,7 +27,10 @@ class SrdSdQuerydateExtendedSearchTabTc(unittest.TestCase):
         driver = self.driver
 
         #on date tests
-        driver.get(self.base_url + "/view.php?fromWhere=fromSearch&flaw=Any...&codecplx=Any...&reference=&description=&author=&contributor=&flawed[]=Any...&languages[]=Any...&typesofartifacts[]=Any...&status_Candidate=1&status_Approved=1&flaw_ro=Any...&codecplx_ro=Any...&date=10%2F21%2F2005&typeDate=On&Submit=Search+Test+Cases")
+        driver.get(self.base_url + "/search.php?extended")
+        driver.find_element_by_xpath("//input[@name='date']").send_keys("10/21/2005")
+        driver.find_element_by_xpath("//div[@id='cleaner_1']/span/label[3]/input").click()
+        driver.find_element_by_xpath("//input[@name='Submit']").click()
         numOfTestCases = common_sd_methods.count_test_cases_in_page(driver)
         self.verify_query_date_on_date(driver, numOfTestCases, "2005-10-21")
 
@@ -34,7 +38,10 @@ class SrdSdQuerydateExtendedSearchTabTc(unittest.TestCase):
             numOfTestCases = common_sd_methods.count_test_cases_in_page(driver)
             self.verify_query_date_on_date(driver, numOfTestCases, "2005-10-21")
 
-        driver.get(self.base_url + "/view.php?fromWhere=fromSearch&flaw=Any...&codecplx=Any...&reference=&description=&author=&contributor=&flawed[]=Any...&languages[]=Any...&typesofartifacts[]=Any...&status_Candidate=1&status_Approved=1&flaw_ro=Any...&codecplx_ro=Any...&date=05%2F22%2F2013&typeDate=On&Submit=Search+Test+Cases")
+        driver.get(self.base_url + "/search.php?extended")
+        driver.find_element_by_xpath("//input[@name='date']").send_keys("05/22/2013")
+        driver.find_element_by_xpath("//div[@id='cleaner_1']/span/label[3]/input").click()
+        driver.find_element_by_xpath("//input[@name='Submit']").click()
         numOfTestCases = common_sd_methods.count_test_cases_in_page(driver)
         self.verify_query_date_on_date(driver, numOfTestCases, "2013-05-22")
 
@@ -42,9 +49,11 @@ class SrdSdQuerydateExtendedSearchTabTc(unittest.TestCase):
             numOfTestCases = common_sd_methods.count_test_cases_in_page(driver)
             self.verify_query_date_on_date(driver, numOfTestCases, "2013-05-22")
 
-
         #before date tests
-        driver.get(self.base_url + "/view.php?fromWhere=fromSearch&flaw=Any...&codecplx=Any...&reference=&description=&author=&contributor=&flawed[]=Any...&languages[]=Any...&typesofartifacts[]=Any...&status_Candidate=1&status_Approved=1&flaw_ro=Any...&codecplx_ro=Any...&date=10%2F21%2F2005&typeDate=Before&Submit=Search+Test+Cases")
+        driver.get(self.base_url + "/search.php?extended")
+        driver.find_element_by_xpath("//input[@name='date']").send_keys("10/21/2005")
+        driver.find_element_by_xpath("//div[@id='cleaner_1']/span/label[2]/input").click()
+        driver.find_element_by_xpath("//input[@name='Submit']").click()
         numOfTestCases = common_sd_methods.count_test_cases_in_page(driver)
         self.verify_query_date_before_date(driver, numOfTestCases, "2005-10-21")
 
@@ -52,7 +61,10 @@ class SrdSdQuerydateExtendedSearchTabTc(unittest.TestCase):
             numOfTestCases = common_sd_methods.count_test_cases_in_page(driver)
             self.verify_query_date_before_date(driver, numOfTestCases, "2005-10-21")
 
-        driver.get(self.base_url + "/view.php?fromWhere=fromSearch&flaw=Any...&codecplx=Any...&reference=&description=&author=&contributor=&flawed[]=Any...&languages[]=Any...&typesofartifacts[]=Any...&status_Candidate=1&status_Approved=1&flaw_ro=Any...&codecplx_ro=Any...&date=05%2F22%2F2013&typeDate=Before&Submit=Search+Test+Cases")
+        driver.get(self.base_url + "/search.php?extended")
+        driver.find_element_by_xpath("//input[@name='date']").send_keys("05/22/2013")
+        driver.find_element_by_xpath("//div[@id='cleaner_1']/span/label[2]/input").click()
+        driver.find_element_by_xpath("//input[@name='Submit']").click()
         numOfTestCases = common_sd_methods.count_test_cases_in_page(driver)
         self.verify_query_date_before_date(driver, numOfTestCases, "2013-05-22")
 
@@ -60,9 +72,11 @@ class SrdSdQuerydateExtendedSearchTabTc(unittest.TestCase):
             numOfTestCases = common_sd_methods.count_test_cases_in_page(driver)
             self.verify_query_date_before_date(driver, numOfTestCases, "2013-05-22")
 
-
         #after date tests
-        driver.get(self.base_url + "/view.php?fromWhere=fromSearch&flaw=Any...&codecplx=Any...&reference=&description=&author=&contributor=&flawed[]=Any...&languages[]=Any...&typesofartifacts[]=Any...&status_Candidate=1&status_Approved=1&flaw_ro=Any...&codecplx_ro=Any...&date=10%2F21%2F2005&typeDate=After&Submit=Search+Test+Cases")
+        driver.get(self.base_url + "/search.php?extended")
+        driver.find_element_by_xpath("//input[@name='date']").send_keys("10/21/2005")
+        driver.find_element_by_xpath("//div[@id='cleaner_1']/span/label[4]/input").click()
+        driver.find_element_by_xpath("//input[@name='Submit']").click()
         numOfTestCases = common_sd_methods.count_test_cases_in_page(driver)
         self.verify_query_date_after_date(driver, numOfTestCases, "2005-10-21")
 
@@ -70,8 +84,10 @@ class SrdSdQuerydateExtendedSearchTabTc(unittest.TestCase):
             numOfTestCases = common_sd_methods.count_test_cases_in_page(driver)
             self.verify_query_date_after_date(driver, numOfTestCases, "2005-10-21")
 
-
-        driver.get(self.base_url + "/view.php?fromWhere=fromSearch&flaw=Any...&codecplx=Any...&reference=&description=&author=&contributor=&flawed[]=Any...&languages[]=Any...&typesofartifacts[]=Any...&status_Candidate=1&status_Approved=1&flaw_ro=Any...&codecplx_ro=Any...&date=05%2F22%2F2013&typeDate=After&Submit=Search+Test+Cases")
+        driver.get(self.base_url + "/search.php?extended")
+        driver.find_element_by_xpath("//input[@name='date']").send_keys("05/22/2013")
+        driver.find_element_by_xpath("//div[@id='cleaner_1']/span/label[4]/input").click()
+        driver.find_element_by_xpath("//input[@name='Submit']").click()
         numOfTestCases = common_sd_methods.count_test_cases_in_page(driver)
         self.verify_query_date_after_date(driver, numOfTestCases, "2013-05-22")
 
@@ -83,22 +99,25 @@ class SrdSdQuerydateExtendedSearchTabTc(unittest.TestCase):
     def verify_query_date_on_date(self, driver, numOfTestCases, date):
         i = 2
         while(i < numOfTestCases):
+            testCaseID = driver.find_element_by_xpath("//div[@id='content']/form/table/tbody/tr[%s]/td[2]" %i).text
             try: self.assertEqual(date, driver.find_element_by_xpath("//div[@id='content']/form/table/tbody/tr[%s]/td[3]" %i).text)
-            except AssertionError as e: self.verificationErrors.append(str(e))
+            except AssertionError as e: self.verificationErrors.append("Date is not the same as %s in test case %s" %(date, testCaseID))
             i +=1
 
     def verify_query_date_before_date(self, driver, numOfTestCases, date):
         i = 2
         while(i < numOfTestCases):
+            testCaseID = driver.find_element_by_xpath("//div[@id='content']/form/table/tbody/tr[%s]/td[2]" %i).text
             try: self.assertTrue(date >= driver.find_element_by_xpath("//div[@id='content']/form/table/tbody/tr[%s]/td[3]" %i).text)
-            except AssertionError as e: self.verificationErrors.append(str(e))
+            except AssertionError as e: self.verificationErrors.append("Date is not before %s in test case %s" %(date, testCaseID))
             i +=1
 
     def verify_query_date_after_date(self, driver, numOfTestCases, date):
         i = 2
         while(i < numOfTestCases):
+            testCaseID = driver.find_element_by_xpath("//div[@id='content']/form/table/tbody/tr[%s]/td[2]" %i).text
             try: self.assertTrue(date <= driver.find_element_by_xpath("//div[@id='content']/form/table/tbody/tr[%s]/td[3]" %i).text)
-            except AssertionError as e: self.verificationErrors.append(str(e))
+            except AssertionError as e: self.verificationErrors.append("Date is not after %s in test case %s" %(date, testCaseID))
             i +=1
 
     def tearDown(self):

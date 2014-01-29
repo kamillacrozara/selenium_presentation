@@ -5,8 +5,8 @@
 File: srd_sd_bigstring_extendedsearchtab_test.py
 Author: Kamilla H. Crozara
 Description:    
-    This tests verifies the searchs using big 
-    strings in fields of the Extended Search tab
+    This tests verifies the searches inserting big 
+    strings in the fields of the Extended Search tab
 """
 
 from selenium import webdriver
@@ -22,6 +22,7 @@ class SrdSdBigstringExtendedsearchtabTc(unittest.TestCase):
         self.base_url = config["BASE_URL"]
         self.verificationErrors = []
         self.accept_next_alert = True
+        self.maxDiff = None
 
     def test_srd_sd_bigstring_extendedsearchtab_tc(self):
         driver = self.driver

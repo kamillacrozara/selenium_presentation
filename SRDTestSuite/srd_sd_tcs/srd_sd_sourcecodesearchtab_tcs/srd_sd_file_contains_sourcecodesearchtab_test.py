@@ -21,35 +21,85 @@ class SrdSdFileContainsSourceCodeSearchtabTc(unittest.TestCase):
         config = {}
         execfile("srd_test_suite.conf", config)
         self.base_url = config["BASE_URL"]
+        #self.base_url = "http://samate.nist.gov/SRD"
         self.verificationErrors = []
         self.accept_next_alert = True
         self.maxDiff = None
         self.fileNames = []
 
-    """This method verifies the results of searchers by filename"""
+    """This method verifies the results of searchers using the field 'File Contains'"""
     def test_srd_sd_file_contains_sourcecodesearchtab(self):
 
         key_words = ["null", "string", "memory", 
                      "buffer", "stack", "heap", 
                      "integer", "race", "error", 
                      "switch", "break", "pointer",
-                     "CWE", "injection", "command" ]
+                     "CWE", "injection", "command"]
+
         
+
         for word in key_words:
             self.driver.get(self.base_url + "/search.php?code")
-            self.driver.find_element_by_xpath("//input[@id='fileName']").send_keys(word)
+            self.driver.find_element_by_xpath("//input[@id='function']").send_keys(word)
             self.driver.find_element_by_xpath("//input[@name='Submit']").click()
-            #must have only one test case with the same ID and the same file
             foundTestCases = common_sd_methods.count_test_cases_in_page(self.driver)
             j = 2
+            found_word = None
+
             while j < (foundTestCases+2):
+                testCaseID = self.driver.find_element_by_xpath(("//div[@id='content']/form/table/tbody/tr[%s]/td[2]/a" %j)).text
                 self.driver.find_element_by_xpath(("//div[@id='content']/form/table/tbody/tr[%s]/td[2]/a" %j)).click()
-                foundFileName = self.driver.find_element_by_xpath("//div[@id='content']/table/tbody/tr[14]/td[2]/ul/li/a").text
-                try: self.assertTrue(re.search(foundFileName, word))
-                except AssertionError as e: self.verificationErrors.append(("The search by %s using the 'file contains' field doesn't return the  is not the same in the test case page" %word))
+
+                #try to find the word on the first tab
+                if(re.search(word, self.driver.find_element_by_xpath("//div[@id='code']").text, re.IGNORECASE)):
+                    found_word = True
+                #search for the word on the other tabs
+                else:
+                    i = 1
+                    while(True):
+                        try:
+                            driver.find_element_by_xpath("//div[@id='mainTabContainer']/div/div[%s]/span" %(i+1)).click()
+                        except:
+                            break
+                        
+                        if(re.search(word, driver.find_element_by_css_selector("div[id='tab%s']" %i).text, re.IGNORECASE)):
+                                found_word = True
+                                
+                        i +=1
+
+                try: self.assertTrue(found_word)
+                except AssertionError as e: self.verificationErrors.append(("Source code doesn't have the term '%s' searched but the test case %s still apearing in the results" %(word, testCaseID)))
+                
                 j += 1
                 self.driver.back()
+
     
+    def find_word_in_source_code(self, word):
+        i = 1
+        numLines = 0
+
+        while(True):
+            try:
+                re.search(word , self.driver.find_element_by_xpath("//div[@id='code']/table/tbody/tr[2]/td/div/ol/li[%s]" %i).text)
+                i += 1
+                return True
+            except:
+                return None
+
+
+
+    def count_test_cases_in_page(self, driver):
+        i = 2
+        numOfTestCases = 0
+
+        while(True):
+            try:
+                driver.find_element_by_xpath("//div[@id='content']/form/table/tbody/tr[%s]/td[2]/a" %i)
+                numOfTestCases += 1
+                i += 1
+            except:
+                return numOfTestCases   
+
     def tearDown(self):
         self.driver.quit()
         self.assertEqual([], self.verificationErrors)

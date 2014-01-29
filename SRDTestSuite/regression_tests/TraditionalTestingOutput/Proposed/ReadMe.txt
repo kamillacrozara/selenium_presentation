@@ -1,1 +1,1 @@
-Files come from: ngSRD
+Files come from: SRD

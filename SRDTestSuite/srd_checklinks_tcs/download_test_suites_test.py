@@ -4,15 +4,15 @@
 File: download_test_suites_test.py
 Author: Kamilla H. Crozara
 Description:    
-    This test verifies the download links of the test suites. 
+    This test  verifies the download links of all 
+   test suites in  Test Suite (/testsuite.php) page. 
 """
 from selenium import webdriver
 import unittest
 import requests
 from srd_sd_tcs.common_sd_methods import common_sd_methods
 
-"""This class verifies the download links of all 
-   test suites in  Test Suite (/testsuite.php) page"""
+
 class DownloadTestSuites(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Firefox()
@@ -22,6 +22,7 @@ class DownloadTestSuites(unittest.TestCase):
         self.base_url = config["BASE_URL"]
         self.verificationErrors = []
         self.accept_next_alert = True
+        self.maxDiff = None
 
     def test_download_standalone_test_suites(self):
         self.verify_link_standalone_suite("/testsuites/stonesoup/stonesoup-c-mc.zip")
@@ -57,13 +58,14 @@ class DownloadTestSuites(unittest.TestCase):
         while(i < numOfTestCases):
             driver.find_element_by_xpath("//div[@id='content']/form/table/tbody/tr[%i]/td/a" %i).click()
             common_sd_methods.assert_title(self, driver, self.verificationErrors)
+            i += 1
 
 
     def verify_link_standalone_suite(self, file_url):
         resp = requests.head(self.base_url + file_url)
         try:
             self.assertEqual(resp.status_code, 200)
-        except AssertionError as e: self.verificationErrors.append(str(e))
+        except AssertionError as e: self.verificationErrors.append("Could not download test suite %s" %file_url)
 
 
     def count_srd_suites(self, driver):

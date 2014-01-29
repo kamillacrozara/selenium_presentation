@@ -11,7 +11,7 @@ from selenium import webdriver
 import unittest
 import requests
 
-"""This class checks all the download links in SRD"""
+
 class DownloadEachTc(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Firefox()
@@ -21,6 +21,7 @@ class DownloadEachTc(unittest.TestCase):
         self.base_url = config["BASE_URL"]
         self.verificationErrors = []
         self.accept_next_alert = True
+        self.maxDiff = None
 
 
     """This method goes to each Test Case in the SRD 
@@ -42,11 +43,11 @@ class DownloadEachTc(unittest.TestCase):
                     tcID = 0
 
                 if(tcID):
-                    #and verify if it's available to download
+                    #and verify if it can be downloaded as expected
                     resp = requests.head(self.base_url + "/view.php?reference=%s&action=zip-selected" %tcID)
                     try: 
                         self.assertEqual(resp.status_code, 200)
-                    except AssertionError as e: self.verificationErrors.append(str(e))
+                    except AssertionError as e: self.verificationErrors.append("Could not download test case %s" %tcID)
                 j += 1 
             i+=20
     

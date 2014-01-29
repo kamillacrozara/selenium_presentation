@@ -23,6 +23,7 @@ class SrdSdDropDownSearchTabTc(unittest.TestCase):
         self.base_url = config["BASE_URL"]
         self.verificationErrors = []
         self.accept_next_alert = True
+        self.maxDiff = None
 
     """Verifies the results of searches using the dropdown menus"""
     def test_srd_sd_dropdown_tc(self):
@@ -138,21 +139,21 @@ class SrdSdDropDownSearchTabTc(unittest.TestCase):
         i = 2
         while(i < numOfTestCases):
             try: self.assertEqual(language, driver.find_element_by_xpath("//div[@id='content']/form/table/tbody/tr[%i]/td[4]" %i).text) 
-            except AssertionError as e: self.verificationErrors.append(str(e))
+            except AssertionError as e: self.verificationErrors.append("The language of the test cases that came out as search result is not the same as the one that was specified on the search fields")
             i +=1
 
     def verify_flawed_element(self, driver, numOfTestCases, testCaseType):
         i = 2
         while(i < numOfTestCases):
             try: self.assertEqual(testCaseType, driver.find_element_by_xpath("//div[@id='content']/form/table/tbody/tr[%s]/td[9]/a/img" %i).get_attribute('alt')) 
-            except AssertionError as e: self.verificationErrors.append(str(e))
+            except AssertionError as e: self.verificationErrors.append("The type of the test cases that came out as search result is not the same as the one that was specified on the search fields")
             i +=1
 
     def verify_artifact_element(self, driver, numOfTestCases, artifactType):
         i = 2
         while(i < numOfTestCases):
             try: self.assertEqual(artifactType, driver.find_element_by_xpath("//div[@id='content']/form/table/tbody/tr[%s]/td[5]" %i).text)
-            except AssertionError as e: self.verificationErrors.append(str(e))
+            except AssertionError as e: self.verificationErrors.append("The artifact of the test cases that came out as search result is not the same as the one that was specified on the search fields")
             i +=1
     
     def tearDown(self):

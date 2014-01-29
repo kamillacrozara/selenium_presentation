@@ -23,6 +23,8 @@ Objective:
 
 Requirements:
 
+	- Linux environment 
+
 	Webdriver and Firefox or Chrome: 
 
 		- Firefox web browser (www.mozilla.org) v >= 24
@@ -44,20 +46,42 @@ Structure:
 	The SRD Test Suite is divided in different modules:
 
 	- Light test suite with basic tests; 
-	- Test suite of the Search/Download tab;
+	- Test suite to check the Search/Download tab;
 	- Test suite to check all the download links of SRD;
-	- Test suite of the User Interface; 
+	- Test suite to check the User Interface; 
+	- Test suite to check the the i-SRD database;
 	- Regression tests to test the SRD for changes.
 
 
 Running tests: 
 
- 	Configuring the base URL:
 
-		The base URL to execute the tests can be modified in the srd_selenium_tests.conf file. It just need the base url between quotes (e.g. BASE_URL = "http://samate.nist.gov/SRD").
+	- Editing the configuration file (srd_selenium_tests.conf)
 
+	 	Configuring the base URL:
+
+			The base URL to execute the tests can be modified in the configuration file. 
+			It just need the base url between quotes (e.g. BASE_URL = "http://samate.nist.gov/SRD").
+
+			The base URL for the i-SRD tests is changed on the source code files.
+
+		Configuring the user name and password:
+
+			For some tests is necessary to authenticate. To provide the user name and password is necessary to
+			change the USER and PASSWORD variable in the configuration file.
+
+
+		Configuring the pages to check if all the links on the given page are available:
+
+			Any SRD page can be checked. The test will check the Status Code of all the "href" elements in a given page.  
+			The list of pages must be in the configuration file in the following format: 
+
+				PAGES = ['/index.php', '/view.php', '/around.php', '/testsuite.php']
+
+			Each page must be surrounded by simple quotes and separated by commas.
 	
-	To execute all tests: 
+	
+	- To execute all tests: 
 
 		$python run_srd_tests.py
 
@@ -66,7 +90,7 @@ Running tests:
 			This command executes all tests cases in the suite. It takes around 8 hours to finish the execution. 
 
 
-	To execute the User Interface tests: 
+	- To execute the User Interface tests: 
 
 		$python run_srd_tests.py ui
 
@@ -76,7 +100,7 @@ Running tests:
 			For more information about these tests check the file srd_ui_tcs/srd_ui_tcs_description.md.
 
 
-	To execute the Search/Download tests: 
+	- To execute the Search/Download tests: 
 
 		$python run_srd_tests.py sd
 
@@ -86,17 +110,17 @@ Running tests:
 			For more information about these tests check the file srd_ui_tcs/srd_sd_tcs_description.md.
 
 
-	To check the download links of SRD: 
+	- To check the download links of SRD: 
 
 		$python run_srd_tests.py ck
 
 		Explanation:
 
-			[ck] => argument to check all the download links in SRD. 
+			[db] => argument to check the i-SRD database. 
 			For more information about these tests check the file srd_ui_tcs/srd_ck_tcs_description.md.
 
 
-	To execute the light version of tests: 
+	- To execute the light version of tests: 
 
 		$python run_srd_tests.py lt
 
@@ -106,7 +130,17 @@ Running tests:
 			For more information about these tests check the file srd_lt_tcs/srd_ck_tcs_description.md.
 
 
-	To execute the Regression Tests:
+	- To execute the i-SRD database tests: 
+
+		$python run_srd_tests.py lt
+
+		Explanation:
+		
+			[lt] => argument to execute basic tests to check the most important functionalities.
+			For more information about these tests check the file srd_lt_tcs/srd_db_tcs_description.md.
+
+
+	- To execute the Regression Tests:
 
 	[For more information about Regression Tests check the file regression_tests/ReadMe.txt]
 		

@@ -48,7 +48,7 @@ class  NumFilesSameValueLightTest(unittest.TestCase):
                 while(j < numOfTestCases):
                     #for each test case
                     driver.find_element_by_xpath("//div[@id='content']/form/table/tbody/tr[%s]/td[2]/a" %testCase).click()
-                    time.sleep(2)
+                    time.sleep(10)
                     #take the number o files
                     fileString = driver.find_element_by_xpath("//div[@id='content']/table/tbody/tr[14]/td[2]").text
                     #and verify if it's correct
@@ -59,10 +59,10 @@ class  NumFilesSameValueLightTest(unittest.TestCase):
                     
                     if(numOfFiles == 1):
                         try: self.assertTrue(i==1)
-                        except AssertionError as e: self.verificationErrors.append(("Number of files is not the same as %s " %i))
+                        except AssertionError as e: self.verificationErrors.append(("Number of files is not the same as %s as expected" %i))
                     else:
                         try: self.assertEqual(i, int(numOfFiles))
-                        except AssertionError as e: self.verificationErrors.append(("Number of files is not the same as %s " %i))
+                        except AssertionError as e: self.verificationErrors.append(("Number of files is not the same as %s as expected" %i))
                     
                     j += 1
                     testCase += 1

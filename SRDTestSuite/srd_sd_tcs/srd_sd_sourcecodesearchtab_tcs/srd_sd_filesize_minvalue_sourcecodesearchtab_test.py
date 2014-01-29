@@ -4,8 +4,7 @@
 File: srd_sd_filesize_minvalue_sourcecodesearchtab_test.py
 Author: Kamilla H. Crozara
 Description:    
-    This tests verifies the searches different values in the min
-    value field in the Source Code Search tab
+    This tests verifies the searches by boundarie values "File size min" field.
 """
 
 from selenium import webdriver
@@ -22,16 +21,16 @@ class SrdSdFileSizeMinValueSourceCodeSearchtabTc(unittest.TestCase):
         self.base_url = config["BASE_URL"]
         self.verificationErrors = []
         self.accept_next_alert = True
+        self.maxDiff = None
 
     """This method verifies the results of searchers for values from 0 to 11 in the main field"""
     def test_srd_sd_filesize_sourcecodesearchtab_tc_min_value(self):
         driver = self.driver
         driver.get(self.base_url + "/search.php?code")
-        #11 is the max number of files in a test case
+        #494975 is the max number of bytes in a test case
         for i in range(494975): 
             j = 0
             testCase = 2
-            #send the same value for max and min
             driver.find_element_by_xpath("//input[@name='minFileSize']").send_keys("%s" %i)
             driver.find_element_by_xpath("//input[@name='Submit']").click()
             time.sleep(2)
@@ -42,6 +41,7 @@ class SrdSdFileSizeMinValueSourceCodeSearchtabTc(unittest.TestCase):
                 driver.back()
             else:
                 while(j < numOfTestCases):
+                    testCaseID = driver.find_element_by_xpath("//div[@id='content']/form/table/tbody/tr[%s]/td[2]/a" %testCase).text
                     driver.find_element_by_xpath("//div[@id='content']/form/table/tbody/tr[%s]/td[2]/a" %testCase).click()
                     time.sleep(2)
                     fileString = driver.find_element_by_xpath("//div[@id='content']/table/tbody/tr[14]/td[2]").text
@@ -54,7 +54,7 @@ class SrdSdFileSizeMinValueSourceCodeSearchtabTc(unittest.TestCase):
                     if(numOfFiles == 1):
                         try: self.assertTrue(int(numOfFiles) <= i)
                         except AssertionError as e: 
-                            self.verificationErrors.append(str(e))
+                            self.verificationErrors.append("The tes case %s has the wrong number " %(testCaseID))
                     else:
                         try: self.assertTrue(int(numOfFiles) <= i)
                         except AssertionError as e: 
